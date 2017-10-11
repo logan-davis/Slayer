@@ -8,28 +8,45 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
-
+class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var RSNLabel: UILabel!
+    @IBOutlet weak var statsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        RSNLabel.text = "Stats for \(PlayerController.shared.playerName)"
+        
+        let searchTerm = PlayerController.shared.playerName
+        
+        PlayerController.shared.searchForRSN(by: searchTerm) { (currentPlayer) in
+            
+            DispatchQueue.main.async {
+                
+                
+                
+            }
+            return
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 600
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = statsTableView.dequeueReusableCell(withIdentifier: "statsCell", for: indexPath) as? StatsTableViewCell else { return UITableViewCell() }
+        
+        guard let player = PlayerController.shared.currentPlayer else { return UITableViewCell() }
+        
+        cell.player = player
+        
+        return cell
+    }
 }

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60B89941F8E8A8D00282E5A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60B89931F8E8A8D00282E5A /* Player.swift */; };
+		E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */; };
+		E62856A21F8D80920023D6FB /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62856A11F8D80920023D6FB /* PlayerController.swift */; };
 		E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63EE4091F72FA29001360C2 /* MenuViewController.swift */; };
-		E6454BFE1F5620E3006C05AD /* slayyanimm.mov in Resources */ = {isa = PBXBuildFile; fileRef = E6454BFD1F5620E3006C05AD /* slayyanimm.mov */; };
 		E6454C001F562229006C05AD /* newslayanim.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6454BFF1F562229006C05AD /* newslayanim.gif */; };
 		E6454C021F562E01006C05AD /* finalloading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6454C011F562E01006C05AD /* finalloading.gif */; };
 		E68F6F2B1F72DC3D0097C70B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */; };
@@ -22,9 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E60B89931F8E8A8D00282E5A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		E62856A11F8D80920023D6FB /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		E63EE4081F72EB5C001360C2 /* RuneScape NPC Chat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RuneScape NPC Chat.ttf"; sourceTree = "<group>"; };
 		E63EE4091F72FA29001360C2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		E6454BFD1F5620E3006C05AD /* slayyanimm.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = slayyanimm.mov; sourceTree = "<group>"; };
 		E6454BFF1F562229006C05AD /* newslayanim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newslayanim.gif; sourceTree = "<group>"; };
 		E6454C011F562E01006C05AD /* finalloading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = finalloading.gif; sourceTree = "<group>"; };
 		E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -73,13 +77,15 @@
 				E6EC91D31F54F9CB0019D1D7 /* AppDelegate.swift */,
 				E6EC91D51F54F9CB0019D1D7 /* ViewController.swift */,
 				E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */,
+				E62856A11F8D80920023D6FB /* PlayerController.swift */,
 				E63EE4091F72FA29001360C2 /* MenuViewController.swift */,
+				E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */,
+				E60B89931F8E8A8D00282E5A /* Player.swift */,
 				E6EC91D71F54F9CB0019D1D7 /* Main.storyboard */,
 				E6EC91DF1F54F9CB0019D1D7 /* LaunchScreen.storyboard */,
 				E6EC91DD1F54F9CB0019D1D7 /* Assets.xcassets */,
 				E6EC91E21F54F9CB0019D1D7 /* Info.plist */,
 				E6EC91DA1F54F9CB0019D1D7 /* Slayer.xcdatamodeld */,
-				E6454BFD1F5620E3006C05AD /* slayyanimm.mov */,
 				E6454BFF1F562229006C05AD /* newslayanim.gif */,
 				E6454C011F562E01006C05AD /* finalloading.gif */,
 				E6EA1E9C1F6C73AC00AF39D4 /* loadinganim.mp4 */,
@@ -152,7 +158,6 @@
 				E6EC91E11F54F9CB0019D1D7 /* LaunchScreen.storyboard in Resources */,
 				E6EC91DE1F54F9CB0019D1D7 /* Assets.xcassets in Resources */,
 				E6454C001F562229006C05AD /* newslayanim.gif in Resources */,
-				E6454BFE1F5620E3006C05AD /* slayyanimm.mov in Resources */,
 				E6454C021F562E01006C05AD /* finalloading.gif in Resources */,
 				E6EA1E9D1F6C778400AF39D4 /* loadinganim.mp4 in Resources */,
 				E6EC91D91F54F9CB0019D1D7 /* Main.storyboard in Resources */,
@@ -171,6 +176,9 @@
 				E6EC91D61F54F9CB0019D1D7 /* ViewController.swift in Sources */,
 				E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */,
 				E6EC91DC1F54F9CB0019D1D7 /* Slayer.xcdatamodeld in Sources */,
+				E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */,
+				E60B89941F8E8A8D00282E5A /* Player.swift in Sources */,
+				E62856A21F8D80920023D6FB /* PlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
