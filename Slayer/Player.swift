@@ -29,23 +29,23 @@ class Player {
     let slayer: Int
     
     init?(dictionary: [String:Any]) {
-        guard let attackDictionary = dictionary[attackKey] as? [String:Any],
-            let strengthDictionary = dictionary[strengthKey] as? [String:Any],
-            let defenceDictionary = dictionary[defenceKey] as? [String:Any],
-            let constitutionDictionary = dictionary[hitpointsKey] as? [String:Any],
-            let magicDictionary = dictionary[magicKey] as? [String:Any],
-            let rangeDictionary = dictionary[rangeKey] as? [String:Any],
-            let prayerDictionary = dictionary[prayerKey] as? [String:Any],
-            let slayerDictionary = dictionary[slayerKey] as? [String:Any],
+        guard let attackDictionary = dictionary[attackKey] as? [String:Int],
+            let strengthDictionary = dictionary[strengthKey] as? [String:Int],
+            let defenceDictionary = dictionary[defenceKey] as? [String:Int],
+            let constitutionDictionary = dictionary[hitpointsKey] as? [String:Int],
+            let magicDictionary = dictionary[magicKey] as? [String:Int],
+            let rangeDictionary = dictionary[rangeKey] as? [String:Int],
+            let prayerDictionary = dictionary[prayerKey] as? [String:Int],
+            let slayerDictionary = dictionary[slayerKey] as? [String:Int],
             
-            let attack = attackDictionary["level"] as? Int,
-            let strength = strengthDictionary["level"] as? Int,
-            let defence = defenceDictionary["level"] as? Int,
-            let constitution = constitutionDictionary["level"] as? Int,
-            let magic = magicDictionary["level"] as? Int,
-            let range = rangeDictionary["level"] as? Int,
-            let prayer = prayerDictionary["level"] as? Int,
-            let slayer = slayerDictionary["level"] as? Int
+            let attack = attackDictionary["level"],
+            let strength = strengthDictionary["level"],
+            let defence = defenceDictionary["level"],
+            let constitution = constitutionDictionary["level"],
+            let magic = magicDictionary["level"],
+            let range = rangeDictionary["level"],
+            let prayer = prayerDictionary["level"],
+            let slayer = slayerDictionary["level"]
             
             else { return nil }
         

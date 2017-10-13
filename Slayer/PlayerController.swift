@@ -59,6 +59,4 @@ class PlayerController {
         }
         dataTask.resume()
     }
-    
-    
 }

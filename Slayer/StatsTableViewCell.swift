@@ -21,16 +21,19 @@ class StatsTableViewCell: UITableViewCell {
     @IBOutlet weak var slayerLevelLabel: UILabel!
     
     var player: Player? {
+
         didSet {
             DispatchQueue.main.async {
-                self.updateViews()
             }
+            self.updateViews()
         }
     }
-    
+
     func updateViews() {
-            
-        self.combatLevelLabel.text = "N/A"
+        
+        
+        
+        self.combatLevelLabel.text = "\(calculateCombatLevel() ?? 3)"
         self.attackLevelLabel.text = "\(player?.attack ?? 1)"
         self.strengthLevelLabel.text = "\(player?.strength ?? 1)"
         self.defenceLevelLabel.text = "\(player?.defence ?? 1)"
@@ -39,5 +42,34 @@ class StatsTableViewCell: UITableViewCell {
         self.magicLevelLabel.text = "\(player?.magic ?? 1)"
         self.prayerLevelLabel.text = "\(player?.prayer ?? 1)"
         self.rangeLevelLabel.text = "\(player?.range ?? 1)"
+        
+    }
+    
+    func calculateCombatLevel() -> Int? {
+        let prayerLevel = Double((player?.prayer)!/2)
+        let rangedLevel = Double((player?.range)!/2)
+        let magicLevel = Double((player?.magic)!/2)
+        let floorPrayer = floor(prayerLevel)
+        let floorRanged = floor(rangedLevel)
+        let floorMagic = floor(magicLevel)
+        let defenceLevel = Double((player?.defence)!)
+        let hpLevel = Double((player?.constitution)!)
+        let strengthLevel = Double((player?.strength)!)
+        let attackLevel = Double((player?.attack)!)
+        let normalRanged = Double((player?.range)!)
+        let normalMagic = Double((player?.magic)!)
+        
+        let base = 0.25 * (defenceLevel + hpLevel + floorPrayer)
+        let melee = 0.325 * (attackLevel + strengthLevel)
+        let range = 0.325 * (floorRanged + normalRanged)
+        let mage = 0.325 * (floorMagic + normalMagic)
+        
+        let meleeCombat = Int(floor(base + melee))
+        let rangeCombat = Int(floor(base + range))
+        let mageCombat = Int(floor(base + mage))
+        let combats = [meleeCombat, rangeCombat, mageCombat]
+        let combatLevel = combats.max()
+        
+        return combatLevel
     }
 }
