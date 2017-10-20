@@ -18,16 +18,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         RSNLabel.text = "\(PlayerController.shared.playerName)"
         
-//        let searchTerm = PlayerController.shared.playerName
-//
-//        PlayerController.shared.searchForRSN(by: searchTerm) { (currentPlayer) in
-//
-//            DispatchQueue.main.async {
-//
-//                self.statsTableView.reloadData()
-//            }
-//            return
-//        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

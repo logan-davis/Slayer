@@ -12,9 +12,29 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var RSNTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBAction func clickHereButtonClicked(_ sender: Any) {
-        
+        attemptToLogin()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.isStatusBarHidden = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        activityIndicator.activityIndicatorViewStyle = .whiteLarge
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.stopAnimating()
+        RSNTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        attemptToLogin()
+        return true
+    }
+    
+    func attemptToLogin() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         activityIndicator.startAnimating()
         guard let playerName = RSNTextField.text else { return }
@@ -29,17 +49,12 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "loginSegue" {
-//            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as UIViewController
-//            present(viewController, animated: true, completion: nil)
-//        }
-//    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.isStatusBarHidden = false
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        activityIndicator.activityIndicatorViewStyle = .whiteLarge
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.stopAnimating()
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }

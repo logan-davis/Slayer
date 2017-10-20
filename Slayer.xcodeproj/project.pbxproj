@@ -13,6 +13,11 @@
 		E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63EE4091F72FA29001360C2 /* MenuViewController.swift */; };
 		E6454C001F562229006C05AD /* newslayanim.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6454BFF1F562229006C05AD /* newslayanim.gif */; };
 		E6454C021F562E01006C05AD /* finalloading.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6454C011F562E01006C05AD /* finalloading.gif */; };
+		E67B1CC61F97C0A40080785A /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CC51F97C0A40080785A /* BlockViewController.swift */; };
+		E67B1CC81F97C3760080785A /* DuradelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CC71F97C3760080785A /* DuradelViewController.swift */; };
+		E67B1CCA1F97C48B0080785A /* NieveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CC91F97C48B0080785A /* NieveViewController.swift */; };
+		E67B1CCC1F97C49A0080785A /* ChaeldarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CCB1F97C49A0080785A /* ChaeldarViewController.swift */; };
+		E67B1CD21F9807F60080785A /* BlockMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CD11F9807F60080785A /* BlockMonster.swift */; };
 		E68F6F2B1F72DC3D0097C70B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */; };
 		E6EA1E9D1F6C778400AF39D4 /* loadinganim.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E6EA1E9C1F6C73AC00AF39D4 /* loadinganim.mp4 */; };
 		E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EC91D31F54F9CB0019D1D7 /* AppDelegate.swift */; };
@@ -21,6 +26,10 @@
 		E6EC91DC1F54F9CB0019D1D7 /* Slayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6EC91DA1F54F9CB0019D1D7 /* Slayer.xcdatamodeld */; };
 		E6EC91DE1F54F9CB0019D1D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EC91DD1F54F9CB0019D1D7 /* Assets.xcassets */; };
 		E6EC91E11F54F9CB0019D1D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EC91DF1F54F9CB0019D1D7 /* LaunchScreen.storyboard */; };
+		E6EFD4E21F9938C4000C948E /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E11F9938C4000C948E /* Master.swift */; };
+		E6EFD4E41F993A75000C948E /* MasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E31F993A75000C948E /* MasterController.swift */; };
+		E6EFD4E61F993A8E000C948E /* MonsterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E51F993A8E000C948E /* MonsterController.swift */; };
+		E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +40,11 @@
 		E63EE4091F72FA29001360C2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E6454BFF1F562229006C05AD /* newslayanim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newslayanim.gif; sourceTree = "<group>"; };
 		E6454C011F562E01006C05AD /* finalloading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = finalloading.gif; sourceTree = "<group>"; };
+		E67B1CC51F97C0A40080785A /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
+		E67B1CC71F97C3760080785A /* DuradelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuradelViewController.swift; sourceTree = "<group>"; };
+		E67B1CC91F97C48B0080785A /* NieveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NieveViewController.swift; sourceTree = "<group>"; };
+		E67B1CCB1F97C49A0080785A /* ChaeldarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaeldarViewController.swift; sourceTree = "<group>"; };
+		E67B1CD11F9807F60080785A /* BlockMonster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMonster.swift; sourceTree = "<group>"; };
 		E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E68F6F2C1F72DFF70097C70B /* runescape_uf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = runescape_uf.ttf; sourceTree = "<group>"; };
 		E6EA1E9C1F6C73AC00AF39D4 /* loadinganim.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loadinganim.mp4; sourceTree = "<group>"; };
@@ -42,6 +56,10 @@
 		E6EC91DD1F54F9CB0019D1D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6EC91E01F54F9CB0019D1D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6EC91E21F54F9CB0019D1D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EFD4E11F9938C4000C948E /* Master.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
+		E6EFD4E31F993A75000C948E /* MasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterController.swift; sourceTree = "<group>"; };
+		E6EFD4E51F993A8E000C948E /* MonsterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterController.swift; sourceTree = "<group>"; };
+		E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMonsterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +99,16 @@
 				E63EE4091F72FA29001360C2 /* MenuViewController.swift */,
 				E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */,
 				E60B89931F8E8A8D00282E5A /* Player.swift */,
+				E67B1CC51F97C0A40080785A /* BlockViewController.swift */,
+				E67B1CC71F97C3760080785A /* DuradelViewController.swift */,
+				E67B1CC91F97C48B0080785A /* NieveViewController.swift */,
+				E67B1CCB1F97C49A0080785A /* ChaeldarViewController.swift */,
+				E67B1CD11F9807F60080785A /* BlockMonster.swift */,
+				E6EFD4E11F9938C4000C948E /* Master.swift */,
+				E6EFD4E31F993A75000C948E /* MasterController.swift */,
+				E6EFD4E51F993A8E000C948E /* MonsterController.swift */,
 				E6EC91D71F54F9CB0019D1D7 /* Main.storyboard */,
+				E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */,
 				E6EC91DF1F54F9CB0019D1D7 /* LaunchScreen.storyboard */,
 				E6EC91DD1F54F9CB0019D1D7 /* Assets.xcassets */,
 				E6EC91E21F54F9CB0019D1D7 /* Info.plist */,
@@ -171,13 +198,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EFD4E41F993A75000C948E /* MasterController.swift in Sources */,
+				E67B1CD21F9807F60080785A /* BlockMonster.swift in Sources */,
 				E68F6F2B1F72DC3D0097C70B /* WelcomeViewController.swift in Sources */,
+				E67B1CC61F97C0A40080785A /* BlockViewController.swift in Sources */,
+				E6EFD4E21F9938C4000C948E /* Master.swift in Sources */,
+				E67B1CCC1F97C49A0080785A /* ChaeldarViewController.swift in Sources */,
 				E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */,
 				E6EC91D61F54F9CB0019D1D7 /* ViewController.swift in Sources */,
 				E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */,
 				E6EC91DC1F54F9CB0019D1D7 /* Slayer.xcdatamodeld in Sources */,
 				E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */,
+				E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */,
 				E60B89941F8E8A8D00282E5A /* Player.swift in Sources */,
+				E67B1CCA1F97C48B0080785A /* NieveViewController.swift in Sources */,
+				E67B1CC81F97C3760080785A /* DuradelViewController.swift in Sources */,
+				E6EFD4E61F993A8E000C948E /* MonsterController.swift in Sources */,
 				E62856A21F8D80920023D6FB /* PlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
