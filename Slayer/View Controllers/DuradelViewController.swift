@@ -18,6 +18,11 @@ class DuradelViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var currentMastersMonsters: [Monster] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         blockTableView.delegate = self
@@ -28,6 +33,7 @@ class DuradelViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = .clear
         self.navigationController?.navigationBar.isTranslucent = true
+        self.tabBarController?.tabBar.isHidden = true
         currentMastersMonsters = filterMonstersToInclude()
         if let master = MasterController.currentlySelectedMaster {
             updateWithMaster(master)
@@ -52,7 +58,6 @@ class DuradelViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = true
     }
     
     func filterMonstersToInclude() -> [Monster] {

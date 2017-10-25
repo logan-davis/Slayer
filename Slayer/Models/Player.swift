@@ -27,6 +27,7 @@ class Player {
     let range: Int
     let prayer: Int
     let slayer: Int
+    var monkeyMadness2: Bool = false
     var horrorFromTheDeep: Bool = false
     var lunarDiplomacy: Bool = false
     var priestInPeril: Bool = false
@@ -36,7 +37,6 @@ class Player {
     var deathToTheDorgeshuun: Bool = false
     var olafsQuest: Bool = false
     var desertTreasure: Bool = false
-    var monkeyMadness2: Bool = false
     
     init?(dictionary: [String:Any]) {
         guard let attackDictionary = dictionary[attackKey] as? [String:Int],

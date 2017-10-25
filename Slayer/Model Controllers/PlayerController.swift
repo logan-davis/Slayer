@@ -60,7 +60,10 @@ class PlayerController {
         dataTask.resume()
     }
     
-    func toggleQuestValues(monkeyMadness2: Bool) {
+    func toggleMonkeyMadness(monkeyMadness2: Bool) {
         currentPlayer?.monkeyMadness2 = monkeyMadness2
+    }
+    func toggleCabinFever(cabinFever: Bool) {
+        currentPlayer?.cabinFever = cabinFever
     }
 }

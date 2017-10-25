@@ -22,11 +22,13 @@ class BlockViewController: UIViewController, UITableViewDelegate, UITableViewDat
         mastersTableView.delegate = self
         mastersTableView.dataSource = self
         mastersTableView.backgroundColor = .clear
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         self.mastersTableView.reloadData()
     }
     

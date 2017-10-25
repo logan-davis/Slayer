@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E60B89941F8E8A8D00282E5A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60B89931F8E8A8D00282E5A /* Player.swift */; };
 		E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */; };
+		E61B64F31F9FF84800DD1F00 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B64F21F9FF84800DD1F00 /* QuestTableViewCell.swift */; };
+		E61B64F51F9FFA0700DD1F00 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B64F41F9FFA0700DD1F00 /* Quest.swift */; };
+		E61B64F71F9FFA5400DD1F00 /* QuestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B64F61F9FFA5400DD1F00 /* QuestController.swift */; };
 		E62856A21F8D80920023D6FB /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62856A11F8D80920023D6FB /* PlayerController.swift */; };
 		E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63EE4091F72FA29001360C2 /* MenuViewController.swift */; };
 		E6454C001F562229006C05AD /* newslayanim.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6454BFF1F562229006C05AD /* newslayanim.gif */; };
@@ -36,6 +39,9 @@
 /* Begin PBXFileReference section */
 		E60B89931F8E8A8D00282E5A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		E61B64F21F9FF84800DD1F00 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
+		E61B64F41F9FFA0700DD1F00 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		E61B64F61F9FFA5400DD1F00 /* QuestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestController.swift; sourceTree = "<group>"; };
 		E62856A11F8D80920023D6FB /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		E63EE4081F72EB5C001360C2 /* RuneScape NPC Chat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RuneScape NPC Chat.ttf"; sourceTree = "<group>"; };
 		E63EE4091F72FA29001360C2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 				E6EFD4E11F9938C4000C948E /* Master.swift */,
 				E67B1CD11F9807F60080785A /* BlockMonster.swift */,
 				E60B89931F8E8A8D00282E5A /* Player.swift */,
+				E61B64F41F9FFA0700DD1F00 /* Quest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 			children = (
 				E62856A11F8D80920023D6FB /* PlayerController.swift */,
 				E6EFD4E31F993A75000C948E /* MasterController.swift */,
+				E61B64F61F9FFA5400DD1F00 /* QuestController.swift */,
 				E6EFD4E51F993A8E000C948E /* MonsterController.swift */,
 			);
 			path = "Model Controllers";
@@ -185,6 +193,7 @@
 				E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */,
 				E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */,
 				E6FC5FF31F9986A500FF6D05 /* MasterTableViewCell.swift */,
+				E61B64F21F9FF84800DD1F00 /* QuestTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -265,7 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61B64F51F9FFA0700DD1F00 /* Quest.swift in Sources */,
 				E6EFD4E41F993A75000C948E /* MasterController.swift in Sources */,
+				E61B64F31F9FF84800DD1F00 /* QuestTableViewCell.swift in Sources */,
 				E67B1CD21F9807F60080785A /* BlockMonster.swift in Sources */,
 				E68F6F2B1F72DC3D0097C70B /* WelcomeViewController.swift in Sources */,
 				E6FC5FF41F9986A500FF6D05 /* MasterTableViewCell.swift in Sources */,
@@ -275,6 +286,7 @@
 				E6EC91D61F54F9CB0019D1D7 /* ViewController.swift in Sources */,
 				E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */,
 				E6EC91DC1F54F9CB0019D1D7 /* Slayer.xcdatamodeld in Sources */,
+				E61B64F71F9FFA5400DD1F00 /* QuestController.swift in Sources */,
 				E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */,
 				E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */,
 				E60B89941F8E8A8D00282E5A /* Player.swift in Sources */,

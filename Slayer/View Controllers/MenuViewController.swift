@@ -27,7 +27,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "statsCell", for: indexPath) as? StatsTableViewCell else { return UITableViewCell() }
         guard let player = PlayerController.shared.currentPlayer else { return UITableViewCell() }
-        cell.backgroundColor = UIColor.clear
+        cell.backgroundColor = .clear
         cell.contentView.backgroundColor = .clear
         cell.player = player
         return cell
