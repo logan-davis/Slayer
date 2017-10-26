@@ -11,7 +11,7 @@
 		E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */; };
 		E61B64F31F9FF84800DD1F00 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B64F21F9FF84800DD1F00 /* QuestTableViewCell.swift */; };
 		E61B64F51F9FFA0700DD1F00 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B64F41F9FFA0700DD1F00 /* Quest.swift */; };
-		E61B64F71F9FFA5400DD1F00 /* QuestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61B64F61F9FFA5400DD1F00 /* QuestController.swift */; };
+		E622D9FF1FA04736003027E4 /* runescape_uf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E622D9FE1FA04736003027E4 /* runescape_uf.ttf */; };
 		E62856A21F8D80920023D6FB /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62856A11F8D80920023D6FB /* PlayerController.swift */; };
 		E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63EE4091F72FA29001360C2 /* MenuViewController.swift */; };
 		E6454C001F562229006C05AD /* newslayanim.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6454BFF1F562229006C05AD /* newslayanim.gif */; };
@@ -22,6 +22,8 @@
 		E67B1CC81F97C3760080785A /* DuradelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CC71F97C3760080785A /* DuradelViewController.swift */; };
 		E67B1CD21F9807F60080785A /* BlockMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CD11F9807F60080785A /* BlockMonster.swift */; };
 		E68F6F2B1F72DC3D0097C70B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */; };
+		E6E410B31FA15E5B009501EF /* UnlockablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E410B21FA15E5B009501EF /* UnlockablesViewController.swift */; };
+		E6E410B51FA15ED5009501EF /* UnlockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E410B41FA15ED5009501EF /* UnlockTableViewCell.swift */; };
 		E6EA1E9D1F6C778400AF39D4 /* loadinganim.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E6EA1E9C1F6C73AC00AF39D4 /* loadinganim.mp4 */; };
 		E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EC91D31F54F9CB0019D1D7 /* AppDelegate.swift */; };
 		E6EC91D61F54F9CB0019D1D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EC91D51F54F9CB0019D1D7 /* ViewController.swift */; };
@@ -33,6 +35,7 @@
 		E6EFD4E41F993A75000C948E /* MasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E31F993A75000C948E /* MasterController.swift */; };
 		E6EFD4E61F993A8E000C948E /* MonsterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E51F993A8E000C948E /* MonsterController.swift */; };
 		E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */; };
+		E6F53F4E1FA0457200FC9F65 /* RuneScape NPC Chat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E63EE4081F72EB5C001360C2 /* RuneScape NPC Chat.ttf */; };
 		E6FC5FF41F9986A500FF6D05 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC5FF31F9986A500FF6D05 /* MasterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +44,8 @@
 		E60B89951F8ECEAD00282E5A /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
 		E61B64F21F9FF84800DD1F00 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
 		E61B64F41F9FFA0700DD1F00 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
-		E61B64F61F9FFA5400DD1F00 /* QuestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestController.swift; sourceTree = "<group>"; };
+		E622D9FC1FA04713003027E4 /* runescape_uf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = runescape_uf.ttf; sourceTree = "<group>"; };
+		E622D9FE1FA04736003027E4 /* runescape_uf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = runescape_uf.ttf; sourceTree = SOURCE_ROOT; };
 		E62856A11F8D80920023D6FB /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		E63EE4081F72EB5C001360C2 /* RuneScape NPC Chat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RuneScape NPC Chat.ttf"; sourceTree = "<group>"; };
 		E63EE4091F72FA29001360C2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +57,8 @@
 		E67B1CC71F97C3760080785A /* DuradelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuradelViewController.swift; sourceTree = "<group>"; };
 		E67B1CD11F9807F60080785A /* BlockMonster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMonster.swift; sourceTree = "<group>"; };
 		E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		E68F6F2C1F72DFF70097C70B /* runescape_uf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = runescape_uf.ttf; sourceTree = "<group>"; };
+		E6E410B21FA15E5B009501EF /* UnlockablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockablesViewController.swift; sourceTree = "<group>"; };
+		E6E410B41FA15ED5009501EF /* UnlockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockTableViewCell.swift; sourceTree = "<group>"; };
 		E6EA1E9C1F6C73AC00AF39D4 /* loadinganim.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loadinganim.mp4; sourceTree = "<group>"; };
 		E6EC91D01F54F9CB0019D1D7 /* Slayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EC91D31F54F9CB0019D1D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +89,8 @@
 		E6EC91C71F54F9CB0019D1D7 = {
 			isa = PBXGroup;
 			children = (
+				E622D9FC1FA04713003027E4 /* runescape_uf.ttf */,
 				E6EC91D21F54F9CB0019D1D7 /* Slayer */,
-				E6EC91D11F54F9CB0019D1D7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +100,13 @@
 				E6EC91D01F54F9CB0019D1D7 /* Slayer.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E6EC91D21F54F9CB0019D1D7 /* Slayer */ = {
 			isa = PBXGroup;
 			children = (
+				E6EC91D11F54F9CB0019D1D7 /* Products */,
 				E6EC91E21F54F9CB0019D1D7 /* Info.plist */,
 				E6EFD4EB1F99823E000C948E /* Fonts */,
 				E6EFD4EA1F99820B000C948E /* Resources */,
@@ -137,7 +144,7 @@
 		E6EFD4EB1F99823E000C948E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				E68F6F2C1F72DFF70097C70B /* runescape_uf.ttf */,
+				E622D9FE1FA04736003027E4 /* runescape_uf.ttf */,
 				E63EE4081F72EB5C001360C2 /* RuneScape NPC Chat.ttf */,
 			);
 			path = Fonts;
@@ -172,6 +179,7 @@
 				E67B1CC71F97C3760080785A /* DuradelViewController.swift */,
 				E675DD981F9FAFF900A70143 /* InformationViewController.swift */,
 				E675DD961F9FAD5300A70143 /* QuestsViewController.swift */,
+				E6E410B21FA15E5B009501EF /* UnlockablesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -181,7 +189,6 @@
 			children = (
 				E62856A11F8D80920023D6FB /* PlayerController.swift */,
 				E6EFD4E31F993A75000C948E /* MasterController.swift */,
-				E61B64F61F9FFA5400DD1F00 /* QuestController.swift */,
 				E6EFD4E51F993A8E000C948E /* MonsterController.swift */,
 			);
 			path = "Model Controllers";
@@ -194,6 +201,7 @@
 				E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */,
 				E6FC5FF31F9986A500FF6D05 /* MasterTableViewCell.swift */,
 				E61B64F21F9FF84800DD1F00 /* QuestTableViewCell.swift */,
+				E6E410B41FA15ED5009501EF /* UnlockTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -259,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6EC91E11F54F9CB0019D1D7 /* LaunchScreen.storyboard in Resources */,
+				E622D9FF1FA04736003027E4 /* runescape_uf.ttf in Resources */,
+				E6F53F4E1FA0457200FC9F65 /* RuneScape NPC Chat.ttf in Resources */,
 				E6EC91DE1F54F9CB0019D1D7 /* Assets.xcassets in Resources */,
 				E6454C001F562229006C05AD /* newslayanim.gif in Resources */,
 				E6454C021F562E01006C05AD /* finalloading.gif in Resources */,
@@ -278,6 +288,7 @@
 				E6EFD4E41F993A75000C948E /* MasterController.swift in Sources */,
 				E61B64F31F9FF84800DD1F00 /* QuestTableViewCell.swift in Sources */,
 				E67B1CD21F9807F60080785A /* BlockMonster.swift in Sources */,
+				E6E410B51FA15ED5009501EF /* UnlockTableViewCell.swift in Sources */,
 				E68F6F2B1F72DC3D0097C70B /* WelcomeViewController.swift in Sources */,
 				E6FC5FF41F9986A500FF6D05 /* MasterTableViewCell.swift in Sources */,
 				E67B1CC61F97C0A40080785A /* BlockViewController.swift in Sources */,
@@ -286,7 +297,6 @@
 				E6EC91D61F54F9CB0019D1D7 /* ViewController.swift in Sources */,
 				E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */,
 				E6EC91DC1F54F9CB0019D1D7 /* Slayer.xcdatamodeld in Sources */,
-				E61B64F71F9FFA5400DD1F00 /* QuestController.swift in Sources */,
 				E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */,
 				E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */,
 				E60B89941F8E8A8D00282E5A /* Player.swift in Sources */,
@@ -294,6 +304,7 @@
 				E6EFD4E61F993A8E000C948E /* MonsterController.swift in Sources */,
 				E675DD971F9FAD5300A70143 /* QuestsViewController.swift in Sources */,
 				E62856A21F8D80920023D6FB /* PlayerController.swift in Sources */,
+				E6E410B31FA15E5B009501EF /* UnlockablesViewController.swift in Sources */,
 				E675DD991F9FAFF900A70143 /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

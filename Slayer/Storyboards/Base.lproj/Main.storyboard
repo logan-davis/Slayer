@@ -12,6 +12,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="runescape_uf.ttf">
+            <string>RuneScape-UF</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -143,28 +148,75 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="Qaq-lt-XbU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FX-4u-QT0">
-                                <rect key="frame" x="67" y="601" width="281" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fancy log out button" image="logout"/>
-                                <connections>
-                                    <action selector="logOutButtonTapped:" destination="gZN-fx-XhJ" eventType="touchUpInside" id="EGn-qo-M4G"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B11-X9-PU7">
-                                <rect key="frame" x="145" y="326" width="141" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Quests"/>
-                                <connections>
-                                    <segue destination="vFf-dr-gdU" kind="show" identifier="toQuests" id="ZRM-Dr-i7i"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-Hu-WO6">
+                                <rect key="frame" x="66" y="106" width="281" height="525"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ja-ST-u1D">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="281" id="Mhz-7U-5hN"/>
+                                            <constraint firstAttribute="height" constant="61" id="wkQ-kG-nwY"/>
+                                        </constraints>
+                                        <state key="normal" title="All Monsters Button" image="finalall"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ju-FC-iG6">
+                                        <rect key="frame" x="0.0" y="116" width="281" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="281" id="4g8-Mf-OcN"/>
+                                            <constraint firstAttribute="height" constant="61" id="KU9-Hu-DWE"/>
+                                        </constraints>
+                                        <state key="normal" title="Superiors Button" image="finalsuperior"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-pa-GXG">
+                                        <rect key="frame" x="0.0" y="232" width="281" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="o7M-dz-9bs"/>
+                                            <constraint firstAttribute="width" constant="281" id="ziw-4z-VsU"/>
+                                        </constraints>
+                                        <state key="normal" title="Unlockables Button" image="finalunlockables"/>
+                                        <connections>
+                                            <segue destination="IAh-u1-8rK" kind="show" identifier="toUnlockables" id="Sex-2t-I1x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B11-X9-PU7">
+                                        <rect key="frame" x="0.0" y="348" width="281" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="7vW-cz-iPi"/>
+                                            <constraint firstAttribute="width" constant="281" id="UKO-zW-Bsw"/>
+                                        </constraints>
+                                        <state key="normal" title="Quests Button" image="finalquest"/>
+                                        <connections>
+                                            <segue destination="vFf-dr-gdU" kind="show" identifier="toQuests" id="ZRM-Dr-i7i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FX-4u-QT0">
+                                        <rect key="frame" x="0.0" y="464" width="281" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="cOj-24-yKN"/>
+                                            <constraint firstAttribute="width" constant="281" id="nUJ-0C-dUK"/>
+                                        </constraints>
+                                        <state key="normal" title="Log Out Button" image="logout"/>
+                                        <connections>
+                                            <action selector="logOutButtonTapped:" destination="gZN-fx-XhJ" eventType="touchUpInside" id="EGn-qo-M4G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="HVF-oc-LRN"/>
+                                    <constraint firstItem="R4h-pa-GXG" firstAttribute="centerX" secondItem="tPv-Hu-WO6" secondAttribute="centerX" id="LSQ-vN-D0c"/>
+                                    <constraint firstItem="6ju-FC-iG6" firstAttribute="centerX" secondItem="tPv-Hu-WO6" secondAttribute="centerX" id="b0S-dq-GUg"/>
+                                    <constraint firstItem="9FX-4u-QT0" firstAttribute="centerX" secondItem="tPv-Hu-WO6" secondAttribute="centerX" id="pzy-u9-hxJ"/>
+                                    <constraint firstItem="6ja-ST-u1D" firstAttribute="centerX" secondItem="tPv-Hu-WO6" secondAttribute="centerX" id="ro7-64-lck"/>
+                                    <constraint firstItem="B11-X9-PU7" firstAttribute="centerX" secondItem="tPv-Hu-WO6" secondAttribute="centerX" id="vWW-tB-Zxd"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qaq-lt-XbU" firstAttribute="top" secondItem="SOz-TG-FIt" secondAttribute="top" id="2Vx-UG-DQz"/>
                             <constraint firstAttribute="trailing" secondItem="Qaq-lt-XbU" secondAttribute="trailing" id="6va-2l-pxS"/>
+                            <constraint firstItem="tPv-Hu-WO6" firstAttribute="centerX" secondItem="SOz-TG-FIt" secondAttribute="centerX" id="LYC-aL-iat"/>
+                            <constraint firstItem="tPv-Hu-WO6" firstAttribute="centerY" secondItem="SOz-TG-FIt" secondAttribute="centerY" id="UlT-4O-b16"/>
                             <constraint firstItem="Qaq-lt-XbU" firstAttribute="leading" secondItem="SOz-TG-FIt" secondAttribute="leading" id="cqV-7q-grg"/>
                             <constraint firstAttribute="bottom" secondItem="Qaq-lt-XbU" secondAttribute="bottom" id="gMJ-wJ-8Ma"/>
                         </constraints>
@@ -173,25 +225,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52m-hI-6Z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2736.231884057971" y="-718.20652173913049"/>
+            <point key="canvasLocation" x="2734.7826086956525" y="-718.20652173913049"/>
         </scene>
         <!--Quests-->
         <scene sceneID="IID-xm-2Pn">
             <objects>
-                <viewController id="vFf-dr-gdU" customClass="QuestsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Quests" extendedLayoutIncludesOpaqueBars="YES" id="vFf-dr-gdU" customClass="QuestsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ged-yJ-Biv"/>
                         <viewControllerLayoutGuide type="bottom" id="73Y-1O-VRc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b3I-wr-gFy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="GvZ-Qa-5qx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4PD-W7-neo" userLabel="Quest Table View">
-                                <rect key="frame" x="0.0" y="64" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="722"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -205,21 +257,59 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="644"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2gA-AS-KnA">
-                                                    <rect key="frame" x="8" y="0.0" width="398" height="644"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2gA-AS-KnA">
+                                                    <rect key="frame" x="8" y="0.0" width="398" height="740"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Bu-lK-yN6" userLabel="Cabin Fever">
-                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-Ug-Dfc" userLabel="Bone Voyage">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cabin Fever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCt-qm-adj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bone Voyage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpB-Yq-Vi8" userLabel="Bone Voyage">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="Dsz-4Q-ZVu"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-gM-Agh">
+                                                                    <rect key="frame" x="349" y="4.3333333333333357" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="boneVoyageValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="evb-fQ-RSf"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Bu-lK-yN6" userLabel="Cabin Fever">
+                                                            <rect key="frame" x="0.0" y="50" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCt-qm-adj">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="07r-eS-JSg"/>
+                                                                    </constraints>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Cabin Fever">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.96710421954314718" green="0.93764869795497663" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <font key="NSFont" size="35" name="RuneScape-UF"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fd3-Dg-BH5">
-                                                                    <rect key="frame" x="349" y="2.6666666666666679" width="51" height="31.000000000000004"/>
+                                                                    <rect key="frame" x="349" y="4.6666666666666679" width="51" height="31.000000000000004"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380731958426" green="0.74787833121827418" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="cabinFeverValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="EUR-QE-a4R"/>
                                                                     </connections>
@@ -227,18 +317,74 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-xv-ofr" userLabel="Death to the Dorgeshuun">
-                                                            <rect key="frame" x="0.0" y="67.666666666666671" width="398" height="36"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-zg-lul" userLabel="Contact">
+                                                            <rect key="frame" x="0.0" y="100" width="398" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death to the Dorgeshuun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1Y-Sn-dBa">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PR-hl-RTc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="rJd-Ex-bfZ"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421954314718" green="0.93764869795497663" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
-                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9JX-EA-TZY">
-                                                                    <rect key="frame" x="349" y="2.3333333333333286" width="51" height="31"/>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-0v-QU8">
+                                                                    <rect key="frame" x="349" y="4.6666666666666643" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="contactValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="zD2-W6-9yd"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y1H-2k-IOW" userLabel="Death Plateau">
+                                                            <rect key="frame" x="0.0" y="150" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death Plateau" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz1-vU-BIc" userLabel="Death Plateau">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="PG0-Us-I5P"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hme-ag-f9U">
+                                                                    <rect key="frame" x="349" y="4.6666666666666714" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="deathPlateauValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="Yuy-V7-X9d"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-xv-ofr" userLabel="Death to the Dorgeshuun">
+                                                            <rect key="frame" x="0.0" y="200" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Death to the Dorgeshuun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1Y-Sn-dBa">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="Cd2-YR-BxB"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9JX-EA-TZY">
+                                                                    <rect key="frame" x="349" y="4.6666666666666572" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="deathToTheDorgeshuunValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="YbX-6w-UKl"/>
                                                                     </connections>
@@ -246,56 +392,49 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tUS-EQ-dWc" userLabel="Desert Treasure">
-                                                            <rect key="frame" x="0.0" y="135" width="398" height="36"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DDj-TV-VSG" userLabel="Lost City">
+                                                            <rect key="frame" x="0.0" y="250" width="398" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desert Treasure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtb-B4-2FC">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lost City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbu-qT-m1z">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="pSp-ES-d9z"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
-                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Img-qd-UlG">
-                                                                    <rect key="frame" x="349" y="2.6666666666666572" width="51" height="31"/>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hYt-jP-hcf">
+                                                                    <rect key="frame" x="349" y="4.6666666666666572" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
-                                                                        <action selector="desertTreasureValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="4O4-ug-ooi"/>
-                                                                    </connections>
-                                                                </switch>
-                                                            </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="45f-NS-eAe" userLabel="Horror from the Deep">
-                                                            <rect key="frame" x="0.0" y="202.66666666666666" width="398" height="36"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horror from the Deep" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8i-on-LZL">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sfX-OR-8WJ">
-                                                                    <rect key="frame" x="349" y="2.6666666666666856" width="51" height="31"/>
-                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <connections>
-                                                                        <action selector="horrorFromTheDeepValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="IWx-6o-6yb"/>
+                                                                        <action selector="lostCityValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="0wX-sc-klj"/>
                                                                     </connections>
                                                                 </switch>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fi4-I4-qtB" userLabel="Lunar Diplomacy">
-                                                            <rect key="frame" x="0.0" y="270.33333333333331" width="398" height="36"/>
+                                                            <rect key="frame" x="0.0" y="300" width="398" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunar Diplomacy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8p-w1-SkS">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="zMk-NP-IfM"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9u-zy-aL1">
-                                                                    <rect key="frame" x="349" y="2.3333333333333712" width="51" height="31"/>
+                                                                    <rect key="frame" x="349" y="4.6666666666666856" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="lunarDiplomacyValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="ddA-Ff-UHf"/>
                                                                     </connections>
@@ -304,17 +443,23 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bri-Xe-v0N" userLabel="Monkey Madness 2">
-                                                            <rect key="frame" x="0.0" y="337.66666666666669" width="398" height="36"/>
+                                                            <rect key="frame" x="0.0" y="350" width="398" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey Madness 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAV-ws-DMg">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey Madness 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAV-ws-DMg">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="Eqd-kL-4Nc"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VBL-Ni-Bsh">
-                                                                    <rect key="frame" x="349" y="2.6666666666666288" width="51" height="31"/>
+                                                                    <rect key="frame" x="349" y="4.6666666666666856" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="monkeyMadness2ValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="jVe-Og-Ike"/>
                                                                     </connections>
@@ -323,17 +468,23 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zAg-Ib-IyT" userLabel="Mournings End Part II">
-                                                            <rect key="frame" x="0.0" y="405.33333333333331" width="398" height="36"/>
+                                                            <rect key="frame" x="0.0" y="400" width="398" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mournings End Part II" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8q9-vp-Pe4">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mourning's Ends Part II" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8q9-vp-Pe4">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="Pcl-7b-9s2"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
-                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1wh-33-ZDb">
-                                                                    <rect key="frame" x="349" y="2.6666666666666856" width="51" height="31"/>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1wh-33-ZDb">
+                                                                    <rect key="frame" x="349" y="4.6666666666666856" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="mourningsEndPart2ValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="vF5-Wk-KNx"/>
                                                                     </connections>
@@ -342,17 +493,23 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nGy-Jy-bQO" userLabel="Olaf's Quest">
-                                                            <rect key="frame" x="0.0" y="473" width="398" height="36"/>
+                                                            <rect key="frame" x="0.0" y="450" width="398" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olaf's Quest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rd-TD-JQI">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="MdU-M3-msL"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C5A-of-w44">
-                                                                    <rect key="frame" x="349" y="2.3333333333333144" width="51" height="31"/>
+                                                                    <rect key="frame" x="349" y="4.6666666666666856" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="olafsQuestValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="w7s-tl-nFM"/>
                                                                     </connections>
@@ -361,17 +518,23 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZH9-Iw-qcw" userLabel="Priest in Peril">
-                                                            <rect key="frame" x="0.0" y="540.33333333333337" width="398" height="36"/>
+                                                            <rect key="frame" x="0.0" y="500" width="398" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priest in Peril" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-ao-OaH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="Mr0-ln-5Mw"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DaV-da-pYJ">
-                                                                    <rect key="frame" x="349" y="2.6666666666666288" width="51" height="31"/>
+                                                                    <rect key="frame" x="349" y="4.6666666666666856" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="priestInPerilValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="Agc-g7-2Uh"/>
                                                                     </connections>
@@ -379,20 +542,491 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vsh-es-Alf" userLabel="Regicide">
+                                                            <rect key="frame" x="0.0" y="550" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regicide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-qh-qHA" userLabel="Regicide">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="JsY-Xg-62E"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5vr-L9-FV2">
+                                                                    <rect key="frame" x="349" y="4.6666666666666856" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="regicideSwitchValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="El5-4g-Hca"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gVi-us-8v7" userLabel="Rum Deal">
-                                                            <rect key="frame" x="0.0" y="608" width="398" height="36"/>
+                                                            <rect key="frame" x="0.0" y="600" width="398" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rum Deal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na3-z3-FD4">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="36"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="9iJ-WW-WzM"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bZt-Gj-v4l">
-                                                                    <rect key="frame" x="349" y="2.6666666666666288" width="51" height="31"/>
+                                                                    <rect key="frame" x="349" y="4.6666666666666288" width="51" height="31"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <connections>
                                                                         <action selector="rumDealValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="DNB-st-5T5"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Axh-vn-72G" userLabel="Skippy">
+                                                            <rect key="frame" x="0.0" y="650" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skippy &amp; the Mogres" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h58-g0-gKR">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="4EB-MZ-LnW"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xQ4-CE-qwP">
+                                                                    <rect key="frame" x="349" y="4.6666666666666288" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="skippyValueChanged:" destination="De1-p7-29K" eventType="valueChanged" id="8TJ-V3-3Am"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-nN-ixD" userLabel="empty">
+                                                            <rect key="frame" x="0.0" y="700" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiF-8Y-j3N">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="sOt-kL-Yto"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="EiF-8Y-j3N" secondAttribute="bottom" id="mNg-pJ-BkQ"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="2gA-AS-KnA" firstAttribute="height" secondItem="ceR-DI-hdo" secondAttribute="height" id="1LI-Bx-3Zw"/>
+                                                <constraint firstItem="2gA-AS-KnA" firstAttribute="top" secondItem="ceR-DI-hdo" secondAttribute="top" id="BVD-ab-ZBT"/>
+                                                <constraint firstItem="2gA-AS-KnA" firstAttribute="leading" secondItem="ceR-DI-hdo" secondAttribute="leading" constant="8" id="MBr-9G-xls"/>
+                                                <constraint firstAttribute="trailing" secondItem="2gA-AS-KnA" secondAttribute="trailing" constant="8" id="jQh-Jf-D5F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="boneVoyageLabel" destination="lpB-Yq-Vi8" id="5fT-3i-srx"/>
+                                            <outlet property="boneVoyageSwitch" destination="YXY-gM-Agh" id="kXt-ef-HO1"/>
+                                            <outlet property="cabinFeverLabel" destination="LCt-qm-adj" id="LOa-g7-muA"/>
+                                            <outlet property="cabinFeverSwitch" destination="Fd3-Dg-BH5" id="ODi-Ml-Mzd"/>
+                                            <outlet property="contactLabel" destination="2PR-hl-RTc" id="a5v-an-PGZ"/>
+                                            <outlet property="contactSwitch" destination="gxn-0v-QU8" id="l54-fZ-ODa"/>
+                                            <outlet property="deathPlateauLabel" destination="kz1-vU-BIc" id="r6P-qp-I72"/>
+                                            <outlet property="deathPlateauSwitch" destination="hme-ag-f9U" id="WqL-SS-X0i"/>
+                                            <outlet property="deathToTheDorgeshuunLabel" destination="k1Y-Sn-dBa" id="D10-r0-40q"/>
+                                            <outlet property="deathToTheDorgeshuunSwitch" destination="9JX-EA-TZY" id="g3R-We-qsu"/>
+                                            <outlet property="lostCityLabel" destination="tbu-qT-m1z" id="vYb-dD-6pM"/>
+                                            <outlet property="lostCitySwitch" destination="hYt-jP-hcf" id="2aC-rV-Vpr"/>
+                                            <outlet property="lunarDiplomacyLabel" destination="E8p-w1-SkS" id="ZeH-Hp-idV"/>
+                                            <outlet property="lunarDiplomacySwitch" destination="N9u-zy-aL1" id="6JO-Qs-EEv"/>
+                                            <outlet property="monkeyMadness2Label" destination="hAV-ws-DMg" id="wzV-Ws-paj"/>
+                                            <outlet property="monkeyMadness2Switch" destination="VBL-Ni-Bsh" id="Q7Y-g2-T52"/>
+                                            <outlet property="mourningsEndPart2Label" destination="8q9-vp-Pe4" id="E9J-bu-jLn"/>
+                                            <outlet property="mourningsEndPart2Switch" destination="1wh-33-ZDb" id="Qib-Bh-80i"/>
+                                            <outlet property="olafsQuestLabel" destination="0rd-TD-JQI" id="BkQ-Wx-7Ck"/>
+                                            <outlet property="olafsQuestSwitch" destination="C5A-of-w44" id="JMj-2N-0bZ"/>
+                                            <outlet property="priestInPerilLabel" destination="ZnQ-ao-OaH" id="2Rk-9A-xVn"/>
+                                            <outlet property="priestInPerilSwitch" destination="DaV-da-pYJ" id="a0e-5e-PLI"/>
+                                            <outlet property="regicideLabel" destination="mbd-qh-qHA" id="TW9-4t-e7Y"/>
+                                            <outlet property="regicideSwitch" destination="5vr-L9-FV2" id="65f-CF-Yga"/>
+                                            <outlet property="rumDealLabel" destination="na3-z3-FD4" id="rGj-XB-fG0"/>
+                                            <outlet property="rumDealSwitch" destination="bZt-Gj-v4l" id="MrU-BZ-9E1"/>
+                                            <outlet property="skippyLabel" destination="h58-g0-gKR" id="iks-PJ-USI"/>
+                                            <outlet property="skippySwitch" destination="xQ4-CE-qwP" id="Oew-kb-ffA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GvZ-Qa-5qx" secondAttribute="trailing" id="3OI-8c-7Jn"/>
+                            <constraint firstItem="GvZ-Qa-5qx" firstAttribute="top" secondItem="b3I-wr-gFy" secondAttribute="top" id="97m-Yt-ucY"/>
+                            <constraint firstItem="4PD-W7-neo" firstAttribute="top" secondItem="ged-yJ-Biv" secondAttribute="bottom" id="VJp-cv-aAn"/>
+                            <constraint firstAttribute="trailing" secondItem="4PD-W7-neo" secondAttribute="trailing" id="VzI-lL-JA7"/>
+                            <constraint firstAttribute="bottom" secondItem="4PD-W7-neo" secondAttribute="bottom" constant="-50" id="dY0-ua-wpX"/>
+                            <constraint firstItem="GvZ-Qa-5qx" firstAttribute="leading" secondItem="b3I-wr-gFy" secondAttribute="leading" id="i2Y-eA-0Pb"/>
+                            <constraint firstItem="4PD-W7-neo" firstAttribute="leading" secondItem="b3I-wr-gFy" secondAttribute="leading" id="m18-W2-g1F"/>
+                            <constraint firstAttribute="bottom" secondItem="GvZ-Qa-5qx" secondAttribute="bottom" constant="-50" id="vaD-Ll-Li0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quests" largeTitleDisplayMode="always" id="eEQ-Y4-ynZ"/>
+                    <connections>
+                        <outlet property="questTableView" destination="4PD-W7-neo" id="O2l-Aq-RKD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57y-HL-4Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2735" y="34"/>
+        </scene>
+        <!--Unlockables-->
+        <scene sceneID="g1o-QA-acz">
+            <objects>
+                <viewController title="Unlockables" extendedLayoutIncludesOpaqueBars="YES" id="IAh-u1-8rK" customClass="UnlockablesViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E4z-1S-2bQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GWI-sL-QhY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ws5-Em-sHf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="vwr-63-Wqs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rg9-Be-YQr" userLabel="Unlockables Table view">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="unlockCell" rowHeight="650" id="NvP-XQ-w2r" customClass="UnlockTableViewCell" customModule="Slayer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="650"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NvP-XQ-w2r" id="B1m-x7-prJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="goK-SI-LR1">
+                                                    <rect key="frame" x="8" y="0.0" width="398" height="650"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="69z-JF-S1H" userLabel="Aviansies">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aviansies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFV-kr-KVe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="t2L-KT-cx3"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-sd-C9m">
+                                                                    <rect key="frame" x="349" y="4.6666666666666679" width="51" height="31.000000000000004"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="aviansiesValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="a7t-Oe-8hd"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kER-fp-coJ" userLabel="Boss">
+                                                            <rect key="frame" x="0.0" y="55" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bosses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zut-pG-39P" userLabel="Boss">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="lsA-tb-dIC"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fAx-5O-7mK">
+                                                                    <rect key="frame" x="349" y="4.6666666666666643" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="bossValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="uhu-9A-aK9"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lmX-fP-XlL" userLabel="Lizardmen">
+                                                            <rect key="frame" x="0.0" y="110.33333333333331" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lizardmen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-A3-0P5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="1Mk-mk-5vE"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-SC-8nJ">
+                                                                    <rect key="frame" x="349" y="4.3333333333333428" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="lizardmenValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="Ohs-AH-a8U"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8hW-nw-cK7" userLabel="Mithril Dragon">
+                                                            <rect key="frame" x="0.0" y="165.33333333333334" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mithril Dragons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpT-Gx-y3O" userLabel="Mithril Dragon">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="yYM-zM-1uH"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-bx-tCt">
+                                                                    <rect key="frame" x="349" y="4.3333333333333144" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="mithrilValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="vBA-UF-TGz"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vyh-IT-0Jj" userLabel="Red Dragon">
+                                                            <rect key="frame" x="0.0" y="220.33333333333334" width="398" height="40.000000000000028"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Dragons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEM-7t-Ojh" userLabel="Red Dragon">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="Elr-a1-OOW"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t5V-Vi-zGS">
+                                                                    <rect key="frame" x="349" y="4.6666666666666572" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="redValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="Cwu-l8-9c5"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zt0-Eg-OdB" userLabel="TzHaar">
+                                                            <rect key="frame" x="0.0" y="275.33333333333331" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TzHaar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aok-m5-JaO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="XAi-d0-hE6"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="0.96710421950000003" green="0.93764869799999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YPp-2k-cpO">
+                                                                    <rect key="frame" x="349" y="4.6666666666666856" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" red="0.027292380729999999" green="0.74787833120000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <connections>
+                                                                        <action selector="tzhaarValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="1Gs-Ji-kfS"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GCt-jJ-tXy" userLabel="Block1">
+                                                            <rect key="frame" x="0.0" y="330.66666666666669" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Slot 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bt-MW-J68" userLabel="Block1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="q4w-Ra-Mxr"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="1" green="0.27450980392156865" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3tJ-xQ-AF9">
+                                                                    <rect key="frame" x="349" y="4.3333333333333144" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <connections>
+                                                                        <action selector="block1ValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="8ks-Sz-ySv"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eUG-Db-ZzB" userLabel="Block2">
+                                                            <rect key="frame" x="0.0" y="385.66666666666669" width="398" height="42"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Slot 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHH-In-Xan" userLabel="Block2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="42"/>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="1" green="0.27450980392156865" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cj9-kb-u9x">
+                                                                    <rect key="frame" x="349" y="5.3333333333333144" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <connections>
+                                                                        <action selector="block2ValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="FQZ-kq-gdK"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-41-PhE" userLabel="Block3">
+                                                            <rect key="frame" x="0.0" y="442.66666666666669" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Slot 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M0-iy-ntu" userLabel="Block3">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="DgA-DW-6gZ"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="1" green="0.27450980392156865" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tJx-v0-cdg">
+                                                                    <rect key="frame" x="349" y="4.6666666666666288" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <connections>
+                                                                        <action selector="block3ValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="HCd-u6-7vB"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Co0-mt-EUo" userLabel="Block4">
+                                                            <rect key="frame" x="0.0" y="497.66666666666674" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Slot 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-wq-5px" userLabel="Block4">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="b2b-SS-DFe"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="1" green="0.27450980392156865" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YXO-Vo-iA0">
+                                                                    <rect key="frame" x="349" y="4.6666666666666288" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <connections>
+                                                                        <action selector="block4ValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="LGe-5y-brz"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wng-xv-44I" userLabel="Block5">
+                                                            <rect key="frame" x="0.0" y="553" width="398" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Slot 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQ2-Mq-Hoh" userLabel="Block5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="uCc-HI-0vR"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="1" green="0.27450980392156865" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WGM-yx-GE6">
+                                                                    <rect key="frame" x="349" y="4.3333333333333712" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <connections>
+                                                                        <action selector="block5ValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="6wO-tF-UW0"/>
+                                                                    </connections>
+                                                                </switch>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="csU-8p-WnK" userLabel="Block6">
+                                                            <rect key="frame" x="0.0" y="608" width="398" height="42"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Slot 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCY-rZ-aXL" userLabel="Block6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="42"/>
+                                                                    <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="35"/>
+                                                                    <color key="textColor" red="1" green="0.27450980392156865" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gig-Dw-VPE">
+                                                                    <rect key="frame" x="349" y="5.6666666666666288" width="51" height="31"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <connections>
+                                                                        <action selector="block6ValueChanged:" destination="NvP-XQ-w2r" eventType="valueChanged" id="HmR-Ga-Ps9"/>
                                                                     </connections>
                                                                 </switch>
                                                             </subviews>
@@ -403,51 +1037,66 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="2gA-AS-KnA" firstAttribute="height" secondItem="ceR-DI-hdo" secondAttribute="height" id="8UH-Ee-A88"/>
-                                                <constraint firstItem="2gA-AS-KnA" firstAttribute="leading" secondItem="ceR-DI-hdo" secondAttribute="leading" constant="8" id="MBr-9G-xls"/>
-                                                <constraint firstAttribute="trailing" secondItem="2gA-AS-KnA" secondAttribute="trailing" constant="8" id="jQh-Jf-D5F"/>
-                                                <constraint firstItem="2gA-AS-KnA" firstAttribute="top" secondItem="ceR-DI-hdo" secondAttribute="top" id="wFR-Eu-S3a"/>
+                                                <constraint firstItem="goK-SI-LR1" firstAttribute="leading" secondItem="B1m-x7-prJ" secondAttribute="leading" constant="8" id="5J1-Zg-HE4"/>
+                                                <constraint firstItem="goK-SI-LR1" firstAttribute="height" secondItem="B1m-x7-prJ" secondAttribute="height" id="CbK-r4-2ZU"/>
+                                                <constraint firstAttribute="trailing" secondItem="goK-SI-LR1" secondAttribute="trailing" constant="8" id="kKO-1B-dyF"/>
+                                                <constraint firstItem="goK-SI-LR1" firstAttribute="top" secondItem="B1m-x7-prJ" secondAttribute="top" id="t7L-pW-NQ4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="goK-SI-LR1" secondAttribute="bottom" id="vqa-gE-eJP"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="cabinFeverSwitch" destination="Fd3-Dg-BH5" id="ODi-Ml-Mzd"/>
-                                            <outlet property="deathToTheDorgeshuunSwitch" destination="9JX-EA-TZY" id="g3R-We-qsu"/>
-                                            <outlet property="desertTreasureSwitch" destination="Img-qd-UlG" id="VHY-yM-NBs"/>
-                                            <outlet property="horrorFromTheDeepSwitch" destination="sfX-OR-8WJ" id="t2j-cf-muR"/>
-                                            <outlet property="lunarDiplomacySwitch" destination="N9u-zy-aL1" id="6JO-Qs-EEv"/>
-                                            <outlet property="monkeyMadness2Switch" destination="VBL-Ni-Bsh" id="Q7Y-g2-T52"/>
-                                            <outlet property="mourningsEndPart2Switch" destination="1wh-33-ZDb" id="Qib-Bh-80i"/>
-                                            <outlet property="olafsQuestSwitch" destination="C5A-of-w44" id="JMj-2N-0bZ"/>
-                                            <outlet property="priestInPerilSwitch" destination="DaV-da-pYJ" id="a0e-5e-PLI"/>
-                                            <outlet property="rumDealSwitch" destination="bZt-Gj-v4l" id="MrU-BZ-9E1"/>
+                                            <outlet property="aviansiesLabel" destination="ZFV-kr-KVe" id="eNl-rw-N7j"/>
+                                            <outlet property="aviansiesSwitch" destination="gXc-sd-C9m" id="ADK-Mm-Lqi"/>
+                                            <outlet property="block1Label" destination="0bt-MW-J68" id="rNR-1y-SFm"/>
+                                            <outlet property="block1Switch" destination="3tJ-xQ-AF9" id="lEh-No-RrA"/>
+                                            <outlet property="block2Label" destination="XHH-In-Xan" id="OVh-mk-VkC"/>
+                                            <outlet property="block2Switch" destination="cj9-kb-u9x" id="uSW-xm-Zs3"/>
+                                            <outlet property="block3Label" destination="2M0-iy-ntu" id="fvm-ji-Ssi"/>
+                                            <outlet property="block3Switch" destination="tJx-v0-cdg" id="oOZ-no-H0d"/>
+                                            <outlet property="block4Label" destination="wLT-wq-5px" id="mHI-p2-4Ew"/>
+                                            <outlet property="block4Switch" destination="YXO-Vo-iA0" id="813-gh-Wbc"/>
+                                            <outlet property="block5Label" destination="KQ2-Mq-Hoh" id="R9s-L7-dIa"/>
+                                            <outlet property="block5Switch" destination="WGM-yx-GE6" id="Tb2-6E-9Vq"/>
+                                            <outlet property="block6Label" destination="MCY-rZ-aXL" id="ldg-7P-dHn"/>
+                                            <outlet property="block6Switch" destination="Gig-Dw-VPE" id="I4A-Dg-9YA"/>
+                                            <outlet property="bossLabel" destination="zut-pG-39P" id="mxX-Fl-g9Z"/>
+                                            <outlet property="bossSwitch" destination="fAx-5O-7mK" id="d7D-5h-83R"/>
+                                            <outlet property="lizardmenLabel" destination="cGp-A3-0P5" id="z7S-op-mBj"/>
+                                            <outlet property="lizardmenSwitch" destination="qGb-SC-8nJ" id="o6k-ln-uo4"/>
+                                            <outlet property="mithrilLabel" destination="NpT-Gx-y3O" id="UGM-cm-EIK"/>
+                                            <outlet property="mithrilSwitch" destination="lVf-bx-tCt" id="BsI-dB-vAK"/>
+                                            <outlet property="redLabel" destination="gEM-7t-Ojh" id="Wfp-H2-Are"/>
+                                            <outlet property="redSwitch" destination="t5V-Vi-zGS" id="hbo-Ze-6OE"/>
+                                            <outlet property="tzhaarLabel" destination="Aok-m5-JaO" id="gyw-TL-slT"/>
+                                            <outlet property="tzhaarSwitch" destination="YPp-2k-cpO" id="9pa-9r-Rlh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GvZ-Qa-5qx" secondAttribute="trailing" id="3OI-8c-7Jn"/>
-                            <constraint firstItem="4PD-W7-neo" firstAttribute="top" secondItem="ged-yJ-Biv" secondAttribute="bottom" id="3Xi-y5-rJP"/>
-                            <constraint firstItem="GvZ-Qa-5qx" firstAttribute="top" secondItem="b3I-wr-gFy" secondAttribute="top" id="97m-Yt-ucY"/>
-                            <constraint firstAttribute="trailing" secondItem="4PD-W7-neo" secondAttribute="trailing" id="VzI-lL-JA7"/>
-                            <constraint firstAttribute="bottom" secondItem="4PD-W7-neo" secondAttribute="bottom" constant="-50" id="dY0-ua-wpX"/>
-                            <constraint firstItem="GvZ-Qa-5qx" firstAttribute="leading" secondItem="b3I-wr-gFy" secondAttribute="leading" id="i2Y-eA-0Pb"/>
-                            <constraint firstItem="4PD-W7-neo" firstAttribute="leading" secondItem="b3I-wr-gFy" secondAttribute="leading" id="m18-W2-g1F"/>
-                            <constraint firstAttribute="bottom" secondItem="GvZ-Qa-5qx" secondAttribute="bottom" constant="-50" id="vaD-Ll-Li0"/>
+                            <constraint firstItem="rg9-Be-YQr" firstAttribute="leading" secondItem="ws5-Em-sHf" secondAttribute="leading" id="CfD-u7-CFC"/>
+                            <constraint firstItem="rg9-Be-YQr" firstAttribute="top" secondItem="ws5-Em-sHf" secondAttribute="top" constant="64" id="EoO-gu-Mgu"/>
+                            <constraint firstAttribute="bottom" secondItem="vwr-63-Wqs" secondAttribute="bottom" constant="-50" id="X1H-p9-2Xr"/>
+                            <constraint firstItem="GWI-sL-QhY" firstAttribute="top" secondItem="rg9-Be-YQr" secondAttribute="bottom" id="a9B-eh-cYV"/>
+                            <constraint firstItem="vwr-63-Wqs" firstAttribute="leading" secondItem="ws5-Em-sHf" secondAttribute="leading" id="d8j-Zq-x2B"/>
+                            <constraint firstItem="vwr-63-Wqs" firstAttribute="top" secondItem="ws5-Em-sHf" secondAttribute="top" id="pkz-aQ-axv"/>
+                            <constraint firstAttribute="trailing" secondItem="rg9-Be-YQr" secondAttribute="trailing" id="vnD-m2-sKJ"/>
+                            <constraint firstAttribute="trailing" secondItem="vwr-63-Wqs" secondAttribute="trailing" id="wVQ-eq-RBE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Quests" leftItemsSupplementBackButton="YES" id="eEQ-Y4-ynZ">
-                        <barButtonItem key="backBarButtonItem" title="wow" id="CAw-fy-dtJ"/>
-                    </navigationItem>
                     <connections>
-                        <outlet property="questTableView" destination="4PD-W7-neo" id="O2l-Aq-RKD"/>
+                        <outlet property="unlockTableView" destination="rg9-Be-YQr" id="ORi-6d-icX"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="57y-HL-4Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3I-cu-0x7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3469.5652173913045" y="-718.20652173913049"/>
+            <point key="canvasLocation" x="3466.666666666667" y="34.239130434782609"/>
         </scene>
         <!--Stats-->
         <scene sceneID="Ph7-kA-5CB">
@@ -1027,6 +1676,10 @@
         <image name="combattttt" width="999" height="999"/>
         <image name="defencetrans" width="898" height="898"/>
         <image name="enterrsn" width="861" height="439"/>
+        <image name="finalall" width="1160" height="269"/>
+        <image name="finalquest" width="1137" height="269"/>
+        <image name="finalsuperior" width="1137" height="271"/>
+        <image name="finalunlockables" width="1137" height="269"/>
         <image name="hitpointstrans" width="1199" height="1194"/>
         <image name="logout" width="1000" height="232"/>
         <image name="shadow" width="1417" height="166"/>

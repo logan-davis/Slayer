@@ -27,16 +27,32 @@ class Player {
     let range: Int
     let prayer: Int
     let slayer: Int
-    var monkeyMadness2: Bool = false
-    var horrorFromTheDeep: Bool = false
-    var lunarDiplomacy: Bool = false
-    var priestInPeril: Bool = false
+    var boneVoyage: Bool = false
     var cabinFever: Bool = false
-    var mourningsEndPart2: Bool = false
-    var rumDeal: Bool = false
+    var contact: Bool = false
+    var deathPlateau: Bool = false
     var deathToTheDorgeshuun: Bool = false
+    var lostCity: Bool = false
+    var lunarDiplomacy: Bool = false
+    var monkeyMadness2: Bool = false
+    var mourningsEndPart2: Bool = false
     var olafsQuest: Bool = false
-    var desertTreasure: Bool = false
+    var priestInPeril: Bool = false
+    var regicide: Bool = false
+    var rumDeal: Bool = false
+    var skippyAndTheMogres: Bool = false
+    var unlockAviansie: Bool = false
+    var unlockBoss: Bool = false
+    var unlockLizardmen: Bool = false
+    var unlockMithrilDragon: Bool = false
+    var unlockRedDragon: Bool = false
+    var unlockTzHaar: Bool = false
+    var block1: Bool = false
+    var block2: Bool = false
+    var block3: Bool = false
+    var block4: Bool = false
+    var block5: Bool = false
+    var block6: Bool = false
     
     init?(dictionary: [String:Any]) {
         guard let attackDictionary = dictionary[attackKey] as? [String:Int],
