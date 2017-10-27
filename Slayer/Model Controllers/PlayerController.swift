@@ -120,22 +120,7 @@ class PlayerController {
     func toggleTzHaar(tzhaar: Bool) {
         currentPlayer?.unlockTzHaar = tzhaar
     }
-    func toggleBlock1(block1: Bool) {
-        currentPlayer?.block1 = block1
-    }
-    func toggleBlock2(block2: Bool) {
-        currentPlayer?.block2 = block2
-    }
-    func toggleBlock3(block3: Bool) {
-        currentPlayer?.block3 = block3
-    }
-    func toggleBlock4(block4: Bool) {
-        currentPlayer?.block4 = block4
-    }
-    func toggleBlock5(block5: Bool) {
-        currentPlayer?.block5 = block5
-    }
-    func toggleBlock6(block6: Bool) {
-        currentPlayer?.block6 = block6
+    func updateBlocks(blocks: Int) {
+        currentPlayer?.blockSlots = blocks
     }
 }

@@ -104,7 +104,7 @@ class MonsterController {
             Monster(image: #imageLiteral(resourceName: "Hellhound"), name: "Hellhound", assigningMasters: allMasters, level: 1),
             Monster(image: #imageLiteral(resourceName: "Iron_dragon"), name: "Iron Dragon", assigningMasters: allMasters, level: 1),
             Monster(image: #imageLiteral(resourceName: "Jelly"), name: "Jelly", assigningMasters: [chaeldar], level: 52),
-            Monster(image: #imageLiteral(resourceName: "Kalphite_Soldier"), name: "Kalphite", assigningMasters: allMasters, level: 1),
+            Monster(image: #imageLiteral(resourceName: "Kalphite_Worker"), name: "Kalphite", assigningMasters: allMasters, level: 1),
             Monster(image: #imageLiteral(resourceName: "Kurask"), name: "Kurask", assigningMasters: allMasters, level: 70),
             Monster(image: #imageLiteral(resourceName: "Lesser_demon"), name: "Lesser Demon", assigningMasters: [chaeldar], level: 1),
             Monster(image: #imageLiteral(resourceName: "Nechryael"), name: "Nechryael", assigningMasters: allMasters, level: 80),
@@ -114,7 +114,7 @@ class MonsterController {
             Monster(image: #imageLiteral(resourceName: "Skeletal_Wyvern"), name: "Skeletal Wyvern", assigningMasters: allMasters, level: 72),
             Monster(image: #imageLiteral(resourceName: "Smoke_devil"), name: "Smoke Devil", assigningMasters: [duradel, stronghold], level: 93),
             Monster(image: #imageLiteral(resourceName: "Steel_dragon"), name: "Steel Dragon", assigningMasters: allMasters, level: 1),
-            Monster(image: #imageLiteral(resourceName: "Mountain_troll"), name: "Troll", assigningMasters: allMasters, level: 1),
+            Monster(image: #imageLiteral(resourceName: "Ice_troll"), name: "Troll", assigningMasters: allMasters, level: 1),
             Monster(image: #imageLiteral(resourceName: "Turoth"), name: "Turoth", assigningMasters: allMasters, level: 55),
             Monster(image: #imageLiteral(resourceName: "Wall_beast"), name: "Wall Beast", assigningMasters: [chaeldar], level: 35),
             Monster(image: #imageLiteral(resourceName: "Waterfiend"), name: "Waterfiend", assigningMasters: [duradel], level: 1)
@@ -182,4 +182,5 @@ class MonsterController {
         
         return unlockedMonsters
     }
+    static var currentMonster: Monster?
 }

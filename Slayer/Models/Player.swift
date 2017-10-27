@@ -47,12 +47,8 @@ class Player {
     var unlockMithrilDragon: Bool = false
     var unlockRedDragon: Bool = false
     var unlockTzHaar: Bool = false
-    var block1: Bool = false
-    var block2: Bool = false
-    var block3: Bool = false
-    var block4: Bool = false
-    var block5: Bool = false
-    var block6: Bool = false
+    var blockSlots: Int = 0
+
     
     init?(dictionary: [String:Any]) {
         guard let attackDictionary = dictionary[attackKey] as? [String:Int],

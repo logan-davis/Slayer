@@ -16,12 +16,6 @@ class UnlockTableViewCell: UITableViewCell {
     @IBOutlet weak var mithrilLabel: UILabel!
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var tzhaarLabel: UILabel!
-    @IBOutlet weak var block1Label: UILabel!
-    @IBOutlet weak var block2Label: UILabel!
-    @IBOutlet weak var block3Label: UILabel!
-    @IBOutlet weak var block4Label: UILabel!
-    @IBOutlet weak var block5Label: UILabel!
-    @IBOutlet weak var block6Label: UILabel!
     
     @IBOutlet weak var aviansiesSwitch: UISwitch!
     @IBAction func aviansiesValueChanged(_ sender: UISwitch) {
@@ -53,36 +47,6 @@ class UnlockTableViewCell: UITableViewCell {
         PlayerController.shared.toggleTzHaar(tzhaar: sender.isOn)
         updateViews()
     }
-    @IBOutlet weak var block1Switch: UISwitch!
-    @IBAction func block1ValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleBlock1(block1: sender.isOn)
-        updateViews()
-    }
-    @IBOutlet weak var block2Switch: UISwitch!
-    @IBAction func block2ValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleBlock2(block2: sender.isOn)
-        updateViews()
-    }
-    @IBOutlet weak var block3Switch: UISwitch!
-    @IBAction func block3ValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleBlock3(block3: sender.isOn)
-        updateViews()
-    }
-    @IBOutlet weak var block4Switch: UISwitch!
-    @IBAction func block4ValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleBlock4(block4: sender.isOn)
-        updateViews()
-    }
-    @IBOutlet weak var block5Switch: UISwitch!
-    @IBAction func block5ValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleBlock5(block5: sender.isOn)
-        updateViews()
-    }
-    @IBOutlet weak var block6Switch: UISwitch!
-    @IBAction func block6ValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleBlock6(block6: sender.isOn)
-        updateViews()
-    }
     
     var player: Player? {
         didSet {
@@ -94,7 +58,7 @@ class UnlockTableViewCell: UITableViewCell {
         setSwitchValues()
         setTextColor()
     }
-    
+
     func setSwitchValues() {
         guard let player = PlayerController.shared.currentPlayer else { return }
         aviansiesSwitch.isOn = player.unlockAviansie
@@ -103,12 +67,6 @@ class UnlockTableViewCell: UITableViewCell {
         mithrilSwitch.isOn = player.unlockMithrilDragon
         redSwitch.isOn = player.unlockRedDragon
         tzhaarSwitch.isOn = player.unlockTzHaar
-        block1Switch.isOn = player.block1
-        block2Switch.isOn = player.block2
-        block3Switch.isOn = player.block3
-        block4Switch.isOn = player.block4
-        block5Switch.isOn = player.block5
-        block6Switch.isOn = player.block6
     }
     
     func setTextColor() {
@@ -135,29 +93,5 @@ class UnlockTableViewCell: UITableViewCell {
         if tzhaarSwitch.isOn == true {
             tzhaarLabel.textColor = .green
         } else { tzhaarLabel.textColor = .yellow }
-        
-        if block1Switch.isOn == true {
-            block1Label.textColor = .white
-        } else { block1Label.textColor = UIColor.init(red: 255/255.0, green: 45/255.0, blue: 0/255.0, alpha: 1) }
-        
-        if block2Switch.isOn == true {
-            block2Label.textColor = .white
-        } else { block2Label.textColor = UIColor.init(red: 255/255.0, green: 45/255.0, blue: 0/255.0, alpha: 1) }
-        
-        if block3Switch.isOn == true {
-            block3Label.textColor = .white
-        } else { block3Label.textColor = UIColor.init(red: 255/255.0, green: 45/255.0, blue: 0/255.0, alpha: 1) }
-        
-        if block4Switch.isOn == true {
-            block4Label.textColor = .white
-        } else { block4Label.textColor = UIColor.init(red: 255/255.0, green: 45/255.0, blue: 0/255.0, alpha: 1) }
-        
-        if block5Switch.isOn == true {
-            block5Label.textColor = .white
-        } else { block5Label.textColor = UIColor.init(red: 255/255.0, green: 45/255.0, blue: 0/255.0, alpha: 1) }
-        
-        if block6Switch.isOn == true {
-            block6Label.textColor = .white
-        } else { block6Label.textColor = UIColor.init(red: 255/255.0, green: 45/255.0, blue: 0/255.0, alpha: 1) }
     }
 }

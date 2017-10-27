@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,17 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalloading.gif" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-t3-IbN">
-                                <rect key="frame" x="63" y="214" width="254" height="223"/>
+                                <rect key="frame" x="46" y="216" width="329" height="289"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="223" id="UMx-tJ-FMA"/>
-                                    <constraint firstAttribute="width" constant="254" id="eM1-HG-9PS"/>
+                                    <constraint firstAttribute="height" constant="289" id="UMx-tJ-FMA"/>
+                                    <constraint firstAttribute="width" constant="329" id="eM1-HG-9PS"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xCL-t3-IbN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="2.5" id="6hJ-FK-C05"/>
-                            <constraint firstItem="xCL-t3-IbN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-8" id="rvd-yw-QBL"/>
+                            <constraint firstItem="xCL-t3-IbN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="23" id="6hJ-FK-C05"/>
+                            <constraint firstItem="xCL-t3-IbN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="27" id="rvd-yw-QBL"/>
                         </constraints>
                     </view>
                 </viewController>
