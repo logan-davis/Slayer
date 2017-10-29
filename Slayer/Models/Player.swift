@@ -48,7 +48,6 @@ class Player {
     var unlockRedDragon: Bool = false
     var unlockTzHaar: Bool = false
     var blockSlots: Int = 0
-
     
     init?(dictionary: [String:Any]) {
         guard let attackDictionary = dictionary[attackKey] as? [String:Int],

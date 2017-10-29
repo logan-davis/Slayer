@@ -16,9 +16,9 @@ class MonsterDetailViewController: UIViewController {
     var currentMonster: AllMonster?
     
     func updateViews() {
-        let currentMonster = AllMonsterController.currentAllMonster
-        monsterImage.image = currentMonster?.image
-        monsterNameLabel.text = currentMonster?.name
+        guard let currentMonster = currentMonster else { return }
+        monsterImage.image = currentMonster.image
+        monsterNameLabel.text = currentMonster.name
     }
     
     override func viewDidLoad() {

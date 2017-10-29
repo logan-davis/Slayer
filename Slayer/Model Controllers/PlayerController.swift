@@ -11,6 +11,7 @@ import Foundation
 class PlayerController {
     
     static let shared = PlayerController()
+    
     var playerName: String = ""
     
     var currentPlayer: Player?
@@ -67,7 +68,7 @@ class PlayerController {
         currentPlayer?.cabinFever = cabinFever
     }
     func toggleContact(contact: Bool) {
-    currentPlayer?.contact = contact
+        currentPlayer?.contact = contact
     }
     func toggleDeathPlateau(deathPlateau: Bool) {
         currentPlayer?.deathPlateau = deathPlateau
