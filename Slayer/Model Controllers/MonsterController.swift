@@ -15,11 +15,32 @@ class MonsterController {
     var monsters: [Monster] {
         
         var unlockedMonsters: [Monster] = []
-        let player = PlayerController.shared.currentPlayer
         let allMasters = MasterController.masters
         let duradel = MasterController.masters[0]
         let stronghold = MasterController.masters[1]
         let chaeldar = MasterController.masters[2]
+        
+        let defaults = UserDefaults.standard
+        let currentPlayer = PlayerController.shared.playerName.lowercased()
+        let boneVoyageKey = "boneVoyageKey\(currentPlayer)"
+        let cabinFeverKey = "cabinKey\(currentPlayer)"
+        let contactKey = "contactKey\(currentPlayer)"
+        let deathPlateauKey = "plateauKey\(currentPlayer)"
+        let deathToTheDorgeshuunKey = "dorgKey\(currentPlayer)"
+        let lostCityKey = "lostKey\(currentPlayer)"
+        let lunarDiplomacyKey = "lunarKey\(currentPlayer)"
+        let mourningsEndPart2Key = "mep2Key\(currentPlayer)"
+        let olafsQuestKey = "olafKey\(currentPlayer)"
+        let priestInPerilKey = "priestKey\(currentPlayer)"
+        let regicideKey = "regicideKey\(currentPlayer)"
+        let rumDealKey = "rumKey\(currentPlayer)"
+        let skippyKey = "skippyKey\(currentPlayer)"
+        let aviansieKey = "aviansieKey\(currentPlayer)"
+        let bossKey = "bossKey\(currentPlayer)"
+        let lizardmenKey = "lizardmenKey\(currentPlayer)"
+        let mithrilKey = "mithrilKey\(currentPlayer)"
+        let redKey = "redKey\(currentPlayer)"
+        let tzhaarKey = "tzhaarKey\(currentPlayer)"
         
         let boneVoyageMonsters = [
             Monster(image: #imageLiteral(resourceName: "Ancient_Wyvern"), name: "Fossil Island Wyvern", assigningMasters: allMasters, level: 82)
@@ -120,63 +141,62 @@ class MonsterController {
             Monster(image: #imageLiteral(resourceName: "Waterfiend"), name: "Waterfiend", assigningMasters: [duradel], level: 1)
         ]
         
-        if player?.boneVoyage == true {
-            unlockedMonsters.append(contentsOf: boneVoyageMonsters)
-        }
-        if player?.cabinFever == true {
-            unlockedMonsters.append(contentsOf: cabinFeverMonsters)
-        }
-        if player?.contact == true {
-            unlockedMonsters.append(contentsOf: contactMonsters)
-        }
-        if player?.deathPlateau == true {
-            unlockedMonsters.append(contentsOf: deathPlateauMonsters)
-        }
-        if player?.deathToTheDorgeshuun == true {
-            unlockedMonsters.append(contentsOf: deathToTheDorgeshuunMonsters)
-        }
-        if player?.lostCity == true {
-            unlockedMonsters.append(contentsOf: lostCityMonsters)
-        }
-        if player?.lunarDiplomacy == true {
-            unlockedMonsters.append(contentsOf: lunarDiplomacyMonsters)
-        }
-        if player?.mourningsEndPart2 == true {
-            unlockedMonsters.append(contentsOf: mourningsEndPart2Monsters)
-        }
-        if player?.olafsQuest == true {
-            unlockedMonsters.append(contentsOf: olafsQuestMonsters)
-        }
-        if player?.priestInPeril == true {
-            unlockedMonsters.append(contentsOf: priestInPerilMonsters)
-        }
-        if player?.regicide == true {
-            unlockedMonsters.append(contentsOf: regicideMonsters)
-        }
-        if player?.rumDeal == true {
-            unlockedMonsters.append(contentsOf: rumDealMonsters)
-        }
-        if player?.skippyAndTheMogres == true {
-            unlockedMonsters.append(contentsOf: skippyAndTheMogresMonsters)
-        }
-        if player?.unlockAviansie == true {
-            unlockedMonsters.append(contentsOf: unlockAviansieTask)
-        }
-        if player?.unlockBoss == true {
-            unlockedMonsters.append(contentsOf: unlockBossTask)
-        }
-        if player?.unlockLizardmen == true {
-            unlockedMonsters.append(contentsOf: unlockLizardmenTask)
-        }
-        if player?.unlockMithrilDragon == true {
-            unlockedMonsters.append(contentsOf: unlockMithrilsTask)
-        }
-        if player?.unlockRedDragon == true {
-            unlockedMonsters.append(contentsOf: unlockRedDragonTask)
-        }
-        if player?.unlockTzHaar == true {
-            unlockedMonsters.append(contentsOf: unlockTzHaarTask)
-        }
+        let setBone = defaults.value(forKey: boneVoyageKey) as! Bool
+        if setBone == true { unlockedMonsters.append(contentsOf: boneVoyageMonsters) }
+        
+        let setCabin = defaults.value(forKey: cabinFeverKey) as! Bool
+        if setCabin == true { unlockedMonsters.append(contentsOf: cabinFeverMonsters) }
+        
+        let setContact = defaults.value(forKey: contactKey) as! Bool
+        if setContact == true { unlockedMonsters.append(contentsOf: contactMonsters) }
+        
+        let setPlateau = defaults.value(forKey: deathPlateauKey) as! Bool
+        if setPlateau == true { unlockedMonsters.append(contentsOf: deathPlateauMonsters) }
+        
+        let setDorg = defaults.value(forKey: deathToTheDorgeshuunKey) as! Bool
+        if setDorg == true { unlockedMonsters.append(contentsOf: deathToTheDorgeshuunMonsters) }
+        
+        let setLost = defaults.value(forKey: lostCityKey) as! Bool
+        if setLost == true { unlockedMonsters.append(contentsOf: lostCityMonsters) }
+        
+        let setLunar = defaults.value(forKey: lunarDiplomacyKey) as! Bool
+        if setLunar == true { unlockedMonsters.append(contentsOf: lunarDiplomacyMonsters) }
+        
+        let setMEP2 = defaults.value(forKey: mourningsEndPart2Key) as! Bool
+        if setMEP2 == true { unlockedMonsters.append(contentsOf: mourningsEndPart2Monsters) }
+        
+        let setOlaf = defaults.value(forKey: olafsQuestKey) as! Bool
+        if setOlaf == true { unlockedMonsters.append(contentsOf: olafsQuestMonsters) }
+        
+        let setPriest = defaults.value(forKey: priestInPerilKey) as! Bool
+        if setPriest == true { unlockedMonsters.append(contentsOf: priestInPerilMonsters) }
+        
+        let setRegicide = defaults.value(forKey: regicideKey) as! Bool
+        if setRegicide == true { unlockedMonsters.append(contentsOf: regicideMonsters) }
+        
+        let setRum = defaults.value(forKey: rumDealKey) as! Bool
+        if setRum == true { unlockedMonsters.append(contentsOf: rumDealMonsters) }
+        
+        let setSkippy = defaults.value(forKey: skippyKey) as! Bool
+        if setSkippy == true { unlockedMonsters.append(contentsOf: skippyAndTheMogresMonsters) }
+        
+        let setAviansie = defaults.value(forKey: aviansieKey) as! Bool
+        if setAviansie == true { unlockedMonsters.append(contentsOf: unlockAviansieTask) }
+        
+        let setBoss = defaults.value(forKey: bossKey) as! Bool
+        if setBoss == true { unlockedMonsters.append(contentsOf: unlockBossTask) }
+        
+        let setLizardmen = defaults.value(forKey: lizardmenKey) as! Bool
+        if setLizardmen == true { unlockedMonsters.append(contentsOf: unlockLizardmenTask) }
+        
+        let setMithrils = defaults.value(forKey: mithrilKey) as! Bool
+        if setMithrils == true { unlockedMonsters.append(contentsOf: unlockMithrilsTask) }
+    
+        let setReds = defaults.value(forKey: redKey) as! Bool
+        if setReds == true { unlockedMonsters.append(contentsOf: unlockRedDragonTask) }
+
+        let setTzhaar = defaults.value(forKey: tzhaarKey) as! Bool
+        if setTzhaar == true { unlockedMonsters.append(contentsOf: unlockTzHaarTask) }
         
         unlockedMonsters.append(contentsOf: defaultMonsters)
         
@@ -184,3 +204,12 @@ class MonsterController {
     }
     static var currentMonster: Monster?
 }
+
+
+//if let setBoss = UserDefaults.standard.value(forKey: bossKey) {
+//    let unlockBoss = setBoss as! Bool
+//    if unlockBoss == true {
+//        unlockedMonsters.append(contentsOf: unlockBossTask)
+//    }
+//}
+

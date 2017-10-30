@@ -9,7 +9,7 @@
 import UIKit
 
 class UnlockTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var aviansiesLabel: UILabel!
     @IBOutlet weak var bossLabel: UILabel!
     @IBOutlet weak var lizardmenLabel: UILabel!
@@ -17,34 +17,42 @@ class UnlockTableViewCell: UITableViewCell {
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var tzhaarLabel: UILabel!
     
+    let defaults = UserDefaults.standard
+    let aviansieKey = "aviansieKey\(PlayerController.shared.playerName.lowercased())"
+    let bossKey = "bossKey\(PlayerController.shared.playerName.lowercased())"
+    let lizardmenKey = "lizardmenKey\(PlayerController.shared.playerName.lowercased())"
+    let mithrilKey = "mithrilKey\(PlayerController.shared.playerName.lowercased())"
+    let redKey = "redKey\(PlayerController.shared.playerName.lowercased())"
+    let tzhaarKey = "tzhaarKey\(PlayerController.shared.playerName.lowercased())"
+    
     @IBOutlet weak var aviansiesSwitch: UISwitch!
     @IBAction func aviansiesValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleAviansies(aviansies: sender.isOn)
+        defaults.set(sender.isOn, forKey: aviansieKey)
         updateViews()
     }
     @IBOutlet weak var bossSwitch: UISwitch!
     @IBAction func bossValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleBoss(boss: sender.isOn)
+        defaults.set(sender.isOn, forKey: bossKey)
         updateViews()
     }
     @IBOutlet weak var lizardmenSwitch: UISwitch!
     @IBAction func lizardmenValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleLizardmen(lizardmen: sender.isOn)
+        defaults.set(sender.isOn, forKey: lizardmenKey)
         updateViews()
     }
     @IBOutlet weak var mithrilSwitch: UISwitch!
     @IBAction func mithrilValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleMithril(mithril: sender.isOn)
+        defaults.set(sender.isOn, forKey: mithrilKey)
         updateViews()
     }
     @IBOutlet weak var redSwitch: UISwitch!
     @IBAction func redValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleRed(red: sender.isOn)
+        defaults.set(sender.isOn, forKey: redKey)
         updateViews()
     }
     @IBOutlet weak var tzhaarSwitch: UISwitch!
     @IBAction func tzhaarValueChanged(_ sender: UISwitch) {
-        PlayerController.shared.toggleTzHaar(tzhaar: sender.isOn)
+        defaults.set(sender.isOn, forKey: tzhaarKey)
         updateViews()
     }
     
@@ -60,16 +68,29 @@ class UnlockTableViewCell: UITableViewCell {
     }
 
     func setSwitchValues() {
-        guard let player = PlayerController.shared.currentPlayer else { return }
-        aviansiesSwitch.isOn = player.unlockAviansie
-        bossSwitch.isOn = player.unlockBoss
-        lizardmenSwitch.isOn = player.unlockLizardmen
-        mithrilSwitch.isOn = player.unlockMithrilDragon
-        redSwitch.isOn = player.unlockRedDragon
-        tzhaarSwitch.isOn = player.unlockTzHaar
+        if let setAviansie = defaults.value(forKey: aviansieKey) {
+            aviansiesSwitch.isOn = setAviansie as! Bool
+        }
+        if let setBoss = defaults.value(forKey: bossKey) {
+            bossSwitch.isOn = setBoss as! Bool
+        }
+        if let setLizardmen = defaults.value(forKey: lizardmenKey) {
+            lizardmenSwitch.isOn = setLizardmen as! Bool
+        }
+        if let setMithrils = defaults.value(forKey: mithrilKey) {
+            mithrilSwitch.isOn = setMithrils as! Bool
+        }
+        if let setReds = defaults.value(forKey: redKey) {
+            redSwitch.isOn = setReds as! Bool
+        }
+        if let setTzhaar = defaults.value(forKey: tzhaarKey) {
+            tzhaarSwitch.isOn = setTzhaar as! Bool
+        }
+
     }
     
     func setTextColor() {
+
         if aviansiesSwitch.isOn == true {
             aviansiesLabel.textColor = .green
         } else { aviansiesLabel.textColor = .yellow }

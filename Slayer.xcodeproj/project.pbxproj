@@ -24,6 +24,7 @@
 		E67B1CC61F97C0A40080785A /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CC51F97C0A40080785A /* BlockViewController.swift */; };
 		E67B1CC81F97C3760080785A /* DuradelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CC71F97C3760080785A /* DuradelViewController.swift */; };
 		E67B1CD21F9807F60080785A /* BlockMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B1CD11F9807F60080785A /* BlockMonster.swift */; };
+		E6863EDC1FA6EA67005C7F9C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6863EDB1FA6EA67005C7F9C /* TabBarViewController.swift */; };
 		E68F6F2B1F72DC3D0097C70B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */; };
 		E699480A1FA18F9B00CA81C9 /* AllMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69948091FA18F9B00CA81C9 /* AllMonster.swift */; };
 		E699480C1FA18FCC00CA81C9 /* AllMonsterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E699480B1FA18FCC00CA81C9 /* AllMonsterController.swift */; };
@@ -69,6 +70,7 @@
 		E67B1CC51F97C0A40080785A /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
 		E67B1CC71F97C3760080785A /* DuradelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuradelViewController.swift; sourceTree = "<group>"; };
 		E67B1CD11F9807F60080785A /* BlockMonster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMonster.swift; sourceTree = "<group>"; };
+		E6863EDB1FA6EA67005C7F9C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E69948091FA18F9B00CA81C9 /* AllMonster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonster.swift; sourceTree = "<group>"; };
 		E699480B1FA18FCC00CA81C9 /* AllMonsterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonsterController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				E675DD961F9FAD5300A70143 /* QuestsViewController.swift */,
 				E6AE46F71FA24F38000BE101 /* SuperiorDetailViewController.swift */,
 				E6E410B81FA17E9B009501EF /* SuperiorsViewController.swift */,
+				E6863EDB1FA6EA67005C7F9C /* TabBarViewController.swift */,
 				E6E410B21FA15E5B009501EF /* UnlockablesViewController.swift */,
 				E6EC91D51F54F9CB0019D1D7 /* ViewController.swift */,
 				E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */,
@@ -263,12 +266,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Mofoe Apps";
 				TargetAttributes = {
 					E6EC91CF1F54F9CB0019D1D7 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Q2K6WEEG8Z;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -331,6 +335,7 @@
 				E65CF3951FA195A600206B4F /* SuperiorController.swift in Sources */,
 				E6EFD4E21F9938C4000C948E /* Master.swift in Sources */,
 				E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */,
+				E6863EDC1FA6EA67005C7F9C /* TabBarViewController.swift in Sources */,
 				E699480C1FA18FCC00CA81C9 /* AllMonsterController.swift in Sources */,
 				E6EC91D61F54F9CB0019D1D7 /* ViewController.swift in Sources */,
 				E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */,
@@ -381,7 +386,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -389,7 +396,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -432,7 +443,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -440,7 +453,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -475,7 +492,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MofoeApps.Slayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -489,7 +507,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MofoeApps.Slayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

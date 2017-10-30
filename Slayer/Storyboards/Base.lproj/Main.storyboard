@@ -1025,7 +1025,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mVK-Af-Cnb" userLabel="Block Wheel">
-                                <rect key="frame" x="92.999999999999986" y="64" width="228.66666666666663" height="100"/>
+                                <rect key="frame" x="93.333333333333329" y="64" width="228.66666666666669" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block Slots" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mw-dX-VUD" userLabel="BlockSlots">
                                         <rect key="frame" x="0.0" y="29" width="178.66666666666666" height="42"/>
@@ -1783,7 +1783,7 @@
         <!--TabBarController-->
         <scene sceneID="akU-aH-1l0">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" title="TabBarController" id="naJ-vz-1ad" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" title="TabBarController" id="naJ-vz-1ad" customClass="TabBarViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="XcD-KG-Rfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>

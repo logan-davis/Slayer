@@ -38,6 +38,9 @@ class DuradelViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let master = MasterController.currentlySelectedMaster {
             updateWithMaster(master)
         }
+        self.blockTableView.reloadData()
+        self.blockTableView.reloadInputViews()
+        BlockMonsterTableViewCell.shared.updateViews()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,14 +59,10 @@ class DuradelViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
     func filterMonstersToInclude() -> [Monster] {
         guard let currentMaster = MasterController.currentlySelectedMaster else { return [] }
         var monstersToInclude = [Monster]()
-        for monster in MonsterController.monsters {
+        for monster in MonsterController.shared.monsters {
             let masterNames = monster.assigningMasters.map( { $0.name})
             if masterNames.contains(currentMaster.name) {
                 let monsterLevel = (monster.level)
@@ -73,6 +72,9 @@ class DuradelViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
             }
         }
-        return monstersToInclude
+        let sortedMonsters = monstersToInclude.sorted { (Monster1, Monster2) -> Bool in
+            return Monster1.name.compare(Monster2.name) == ComparisonResult.orderedAscending
+        }
+        return sortedMonsters
     }
 }

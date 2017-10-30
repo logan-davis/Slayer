@@ -15,8 +15,11 @@ class MasterController {
         let nieve = Master(name: "Nieve", image: #imageLiteral(resourceName: "nieve"))
         let chaeldar = Master(name: "Chaeldar", image: #imageLiteral(resourceName: "chaeldar"))
         let steve = Master(name: "Steve", image: #imageLiteral(resourceName: "steve"))
+        let mm2Key = "mm2Key\(PlayerController.shared.playerName.lowercased())"
+
+        let unlockSteve = UserDefaults.standard.value(forKey: mm2Key) as! Bool
         
-        if PlayerController.shared.currentPlayer?.monkeyMadness2 == true {
+        if unlockSteve == true {
             return [duradel, steve, chaeldar]
         } else {
             return [duradel, nieve, chaeldar]
