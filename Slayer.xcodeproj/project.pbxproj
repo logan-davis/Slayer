@@ -47,6 +47,8 @@
 		E6EFD4E61F993A8E000C948E /* MonsterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E51F993A8E000C948E /* MonsterController.swift */; };
 		E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */; };
 		E6F53F4E1FA0457200FC9F65 /* RuneScape NPC Chat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E63EE4081F72EB5C001360C2 /* RuneScape NPC Chat.ttf */; };
+		E6F6B0751FA7E0CF00CA3B66 /* WhichMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6B0741FA7E0CF00CA3B66 /* WhichMonsterViewController.swift */; };
+		E6F6B0771FA7E1FD00CA3B66 /* RemoveAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6B0761FA7E1FD00CA3B66 /* RemoveAdsViewController.swift */; };
 		E6FC5FF41F9986A500FF6D05 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC5FF31F9986A500FF6D05 /* MasterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,8 @@
 		E6EFD4E31F993A75000C948E /* MasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterController.swift; sourceTree = "<group>"; };
 		E6EFD4E51F993A8E000C948E /* MonsterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterController.swift; sourceTree = "<group>"; };
 		E6EFD4E71F995FFF000C948E /* BlockMonsterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMonsterTableViewCell.swift; sourceTree = "<group>"; };
+		E6F6B0741FA7E0CF00CA3B66 /* WhichMonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichMonsterViewController.swift; sourceTree = "<group>"; };
+		E6F6B0761FA7E1FD00CA3B66 /* RemoveAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAdsViewController.swift; sourceTree = "<group>"; };
 		E6FC5FF31F9986A500FF6D05 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,12 +207,14 @@
 				E63EE4091F72FA29001360C2 /* MenuViewController.swift */,
 				E65CF3961FA1989500206B4F /* MonsterDetailViewController.swift */,
 				E675DD961F9FAD5300A70143 /* QuestsViewController.swift */,
+				E6F6B0761FA7E1FD00CA3B66 /* RemoveAdsViewController.swift */,
 				E6AE46F71FA24F38000BE101 /* SuperiorDetailViewController.swift */,
 				E6E410B81FA17E9B009501EF /* SuperiorsViewController.swift */,
 				E6863EDB1FA6EA67005C7F9C /* TabBarViewController.swift */,
 				E6E410B21FA15E5B009501EF /* UnlockablesViewController.swift */,
 				E6EC91D51F54F9CB0019D1D7 /* ViewController.swift */,
 				E68F6F2A1F72DC3D0097C70B /* WelcomeViewController.swift */,
+				E6F6B0741FA7E0CF00CA3B66 /* WhichMonsterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				E67B1CC61F97C0A40080785A /* BlockViewController.swift in Sources */,
 				E6E410BD1FA180B5009501EF /* SuperiorTableViewCell.swift in Sources */,
 				E6E410B71FA17E90009501EF /* AllMonstersViewController.swift in Sources */,
+				E6F6B0751FA7E0CF00CA3B66 /* WhichMonsterViewController.swift in Sources */,
 				E65CF3951FA195A600206B4F /* SuperiorController.swift in Sources */,
 				E6EFD4E21F9938C4000C948E /* Master.swift in Sources */,
 				E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */,
@@ -344,6 +351,7 @@
 				E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */,
 				E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */,
 				E60B89941F8E8A8D00282E5A /* Player.swift in Sources */,
+				E6F6B0771FA7E1FD00CA3B66 /* RemoveAdsViewController.swift in Sources */,
 				E67B1CC81F97C3760080785A /* DuradelViewController.swift in Sources */,
 				E6EFD4E61F993A8E000C948E /* MonsterController.swift in Sources */,
 				E675DD971F9FAD5300A70143 /* QuestsViewController.swift in Sources */,
