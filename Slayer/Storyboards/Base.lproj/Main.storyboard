@@ -278,13 +278,16 @@
                                     <segue destination="jeN-LC-sRc" kind="show" id="u9i-fB-GE9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajp-f8-Bd6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajp-f8-Bd6" userLabel="Masters Button">
                                 <rect key="frame" x="67" y="313" width="281" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="281" id="Hf0-1m-dW6"/>
                                     <constraint firstAttribute="height" constant="61" id="N0u-3S-VWS"/>
                                 </constraints>
                                 <state key="normal" title="Superiors Button" image="finalmasters"/>
+                                <connections>
+                                    <segue destination="5ct-sF-eUV" kind="show" id="ktZ-AH-WZx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -308,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="2734.7826086956525" y="-1396.467391304348"/>
         </scene>
-        <!--View Controller-->
+        <!--Master Info View Controller-->
         <scene sceneID="o5D-7e-waF">
             <objects>
-                <viewController id="5ct-sF-eUV" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="5ct-sF-eUV" customClass="MasterInfoViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M0Q-wo-Np7"/>
                         <viewControllerLayoutGuide type="bottom" id="AH5-gW-IMa"/>
@@ -323,26 +326,135 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="VHo-8i-aEn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-Fe-bGN">
+                                <rect key="frame" x="0.0" y="90" width="414" height="646"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MasterCell" rowHeight="154" id="ZXc-rm-Axq" customClass="MasterTableViewCell" customModule="Slayer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="154"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZXc-rm-Axq" id="FNm-Z8-Dap">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4jp-8j-zp1">
+                                                    <rect key="frame" x="16" y="18" width="382" height="118"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="4jp-8j-zp1" secondAttribute="height" multiplier="191:59" id="MeK-wv-FOy"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4jp-8j-zp1" firstAttribute="centerY" secondItem="FNm-Z8-Dap" secondAttribute="centerY" id="AL9-v5-5hP"/>
+                                                <constraint firstItem="4jp-8j-zp1" firstAttribute="top" secondItem="FNm-Z8-Dap" secondAttribute="topMargin" constant="10" id="VPp-Hu-d6b"/>
+                                                <constraint firstItem="4jp-8j-zp1" firstAttribute="centerX" secondItem="FNm-Z8-Dap" secondAttribute="centerX" id="ZMf-Dt-k1u"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="masterImage" destination="4jp-8j-zp1" id="0yt-bB-Yfb"/>
+                                            <segue destination="rBi-nZ-a9A" kind="show" identifier="toMasterDetail" id="14R-sn-z2f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VHo-8i-aEn" secondAttribute="trailing" id="4iw-r3-Dxo"/>
                             <constraint firstAttribute="bottom" secondItem="VHo-8i-aEn" secondAttribute="bottom" id="7xI-hK-35T"/>
+                            <constraint firstItem="AH5-gW-IMa" firstAttribute="top" secondItem="Icx-Fe-bGN" secondAttribute="bottom" id="Ez2-fk-mth"/>
                             <constraint firstItem="VHo-8i-aEn" firstAttribute="leading" secondItem="RFS-zw-YHp" secondAttribute="leading" id="TEg-wL-wBa"/>
                             <constraint firstItem="VHo-8i-aEn" firstAttribute="centerY" secondItem="RFS-zw-YHp" secondAttribute="centerY" id="Vta-W0-6Fd"/>
+                            <constraint firstItem="Icx-Fe-bGN" firstAttribute="leading" secondItem="RFS-zw-YHp" secondAttribute="leading" id="WJb-M1-hru"/>
+                            <constraint firstAttribute="trailing" secondItem="Icx-Fe-bGN" secondAttribute="trailing" id="Xlt-NN-cd4"/>
                             <constraint firstItem="VHo-8i-aEn" firstAttribute="centerX" secondItem="RFS-zw-YHp" secondAttribute="centerX" id="jxO-e3-GGR"/>
                             <constraint firstItem="VHo-8i-aEn" firstAttribute="top" secondItem="RFS-zw-YHp" secondAttribute="top" id="kWf-tW-oez"/>
+                            <constraint firstItem="Icx-Fe-bGN" firstAttribute="top" secondItem="M0Q-wo-Np7" secondAttribute="bottom" constant="26" id="q2D-gx-pN5"/>
+                            <constraint firstItem="Icx-Fe-bGN" firstAttribute="centerX" secondItem="RFS-zw-YHp" secondAttribute="centerX" id="z0l-0k-7nT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="masterInfoTable" destination="Icx-Fe-bGN" id="8Yk-r3-qhH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydB-Kd-MA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3506" y="-2058"/>
+            <point key="canvasLocation" x="3505.7971014492755" y="-2058.4239130434785"/>
+        </scene>
+        <!--Master Detail View Controller-->
+        <scene sceneID="ZPI-PG-f6R">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="rBi-nZ-a9A" customClass="MasterDetailViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wZr-vW-Sc3"/>
+                        <viewControllerLayoutGuide type="bottom" id="KK6-9O-8Ot"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="poP-76-RBK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-IO-Hnh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="muA-vy-NNt">
+                                <rect key="frame" x="87" y="64" width="240" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ArF-si-Sxc"/>
+                                    <constraint firstAttribute="width" secondItem="muA-vy-NNt" secondAttribute="height" multiplier="3:2" id="dfG-rf-Wud"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acB-0X-qak">
+                                <rect key="frame" x="0.0" y="232" width="414" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="0Tt-PI-zg8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="43"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN7-KE-hKq">
+                                <rect key="frame" x="0.0" y="283" width="414" height="38"/>
+                                <fontDescription key="fontDescription" name="RuneScape-UF" family="RuneScape UF" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yN7-KE-hKq" firstAttribute="trailing" secondItem="acB-0X-qak" secondAttribute="trailing" id="0jC-qd-DxK"/>
+                            <constraint firstItem="yN7-KE-hKq" firstAttribute="top" secondItem="acB-0X-qak" secondAttribute="bottom" constant="8" symbolic="YES" id="1EL-c6-vij"/>
+                            <constraint firstItem="muA-vy-NNt" firstAttribute="centerX" secondItem="poP-76-RBK" secondAttribute="centerX" id="1EM-Wx-CCP"/>
+                            <constraint firstItem="acB-0X-qak" firstAttribute="trailing" secondItem="jiL-IO-Hnh" secondAttribute="trailing" id="6If-27-uxc"/>
+                            <constraint firstItem="jiL-IO-Hnh" firstAttribute="leading" secondItem="poP-76-RBK" secondAttribute="leading" id="MYq-sK-bdx"/>
+                            <constraint firstItem="acB-0X-qak" firstAttribute="top" secondItem="muA-vy-NNt" secondAttribute="bottom" constant="8" symbolic="YES" id="NMu-N2-Wv7"/>
+                            <constraint firstItem="KK6-9O-8Ot" firstAttribute="top" secondItem="jiL-IO-Hnh" secondAttribute="bottom" constant="-50" id="S35-yS-OjW"/>
+                            <constraint firstItem="KK6-9O-8Ot" firstAttribute="top" secondItem="yN7-KE-hKq" secondAttribute="bottom" constant="415" id="Vux-01-Ubj"/>
+                            <constraint firstItem="jiL-IO-Hnh" firstAttribute="top" secondItem="poP-76-RBK" secondAttribute="top" id="YxD-7J-s4P"/>
+                            <constraint firstItem="acB-0X-qak" firstAttribute="leading" secondItem="jiL-IO-Hnh" secondAttribute="leading" id="fMg-Eu-SM0"/>
+                            <constraint firstItem="yN7-KE-hKq" firstAttribute="leading" secondItem="acB-0X-qak" secondAttribute="leading" id="h7e-ml-JqS"/>
+                            <constraint firstAttribute="trailing" secondItem="jiL-IO-Hnh" secondAttribute="trailing" id="prJ-BK-ErQ"/>
+                            <constraint firstItem="muA-vy-NNt" firstAttribute="top" secondItem="wZr-vW-Sc3" secondAttribute="bottom" id="rWG-Mf-Jpf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="masterExamineLabel" destination="yN7-KE-hKq" id="lsU-NT-KmT"/>
+                        <outlet property="masterImage" destination="muA-vy-NNt" id="eiy-VU-5XU"/>
+                        <outlet property="masterNameLabel" destination="acB-0X-qak" id="kHg-IW-k1v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTZ-UH-1bQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4298.5507246376819" y="-2058.4239130434785"/>
         </scene>
         <!--Slayer Monsters-->
         <scene sceneID="h9R-ZR-lW7">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="cl6-h4-QVl" customClass="AllMonstersViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="cl6-h4-QVl" customClass="AllMonstersViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xvy-ac-ddE"/>
                         <viewControllerLayoutGuide type="bottom" id="k2O-qS-sLD"/>
@@ -441,17 +553,17 @@
         <!--Monster Detail View Controller-->
         <scene sceneID="nJn-tn-7Xj">
             <objects>
-                <viewController storyboardIdentifier="MonsterDetailVC" id="gEi-d8-Und" customClass="MonsterDetailViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MonsterDetailVC" hidesBottomBarWhenPushed="YES" id="gEi-d8-Und" customClass="MonsterDetailViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5A9-4E-8NI"/>
                         <viewControllerLayoutGuide type="bottom" id="IhN-zv-Z4K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jGb-Pc-pNT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-HF-vNs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3EP-Pe-Hwq">
                                 <rect key="frame" x="87" y="64" width="240" height="219"/>
@@ -459,15 +571,15 @@
                                     <constraint firstAttribute="width" secondItem="3EP-Pe-Hwq" secondAttribute="height" multiplier="15:8" constant="-170.625" id="3FU-9n-7Ev"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lots of neat info here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX8-x0-caj">
-                                <rect key="frame" x="71" y="474" width="273.33333333333326" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Twitch.tv/rigondeaux_rs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX8-x0-caj">
+                                <rect key="frame" x="56" y="474" width="305" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk6-vY-7TJ">
-                                <rect key="frame" x="20" y="291" width="374" height="45"/>
+                                <rect key="frame" x="20" y="291" width="374" height="94"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -503,7 +615,7 @@
         <!--Superior Monsters-->
         <scene sceneID="QWv-aq-PLn">
             <objects>
-                <viewController title="Superior Monsters" extendedLayoutIncludesOpaqueBars="YES" id="jeN-LC-sRc" customClass="SuperiorsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Superior Monsters" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="jeN-LC-sRc" customClass="SuperiorsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NKm-WF-ulI"/>
                         <viewControllerLayoutGuide type="bottom" id="Yf3-Px-XYo"/>
@@ -585,26 +697,26 @@
         <!--Superior Detail View Controller-->
         <scene sceneID="yyC-cd-3rs">
             <objects>
-                <viewController id="wlT-Rx-xzp" customClass="SuperiorDetailViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="wlT-Rx-xzp" customClass="SuperiorDetailViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tzk-Hq-hxJ"/>
                         <viewControllerLayoutGuide type="bottom" id="z0U-bU-o6L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KEG-lv-DTk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="eTx-xx-2Gd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ms-hk-HBD">
-                                <rect key="frame" x="87" y="64" width="240" height="219"/>
+                                <rect key="frame" x="41" y="64" width="332" height="268"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4Ms-hk-HBD" secondAttribute="height" multiplier="15:8" constant="-170.625" id="Dlb-4C-FYh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvv-wj-iSj">
-                                <rect key="frame" x="20" y="300" width="374" height="45"/>
+                                <rect key="frame" x="20" y="349" width="374" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -638,7 +750,7 @@
         <!--Quests-->
         <scene sceneID="IID-xm-2Pn">
             <objects>
-                <viewController title="Quests" extendedLayoutIncludesOpaqueBars="YES" id="vFf-dr-gdU" customClass="QuestsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Quests" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="vFf-dr-gdU" customClass="QuestsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ged-yJ-Biv"/>
                         <viewControllerLayoutGuide type="bottom" id="73Y-1O-VRc"/>
@@ -1143,7 +1255,7 @@
         <!--Unlockables-->
         <scene sceneID="g1o-QA-acz">
             <objects>
-                <viewController title="Unlockables" extendedLayoutIncludesOpaqueBars="YES" id="IAh-u1-8rK" customClass="UnlockablesViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Unlockables" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="IAh-u1-8rK" customClass="UnlockablesViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E4z-1S-2bQ"/>
                         <viewControllerLayoutGuide type="bottom" id="GWI-sL-QhY"/>
@@ -1402,17 +1514,17 @@
         <!--Remove Ads View Controller-->
         <scene sceneID="Tsf-Rj-WUk">
             <objects>
-                <viewController id="4yR-mB-dgY" customClass="RemoveAdsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="4yR-mB-dgY" customClass="RemoveAdsViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uBM-ds-APZ"/>
                         <viewControllerLayoutGuide type="bottom" id="74t-GS-Cia"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i6y-5o-xqa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="nD3-EG-xhG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMs-RH-eHL">
                                 <rect key="frame" x="67" y="118" width="281" height="61"/>
@@ -1858,20 +1970,20 @@
         <!--Duradel View Controller-->
         <scene sceneID="6CI-Nq-qdO">
             <objects>
-                <viewController id="QO9-yc-OYe" customClass="DuradelViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="QO9-yc-OYe" customClass="DuradelViewController" customModule="Slayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SK0-gn-E3o"/>
                         <viewControllerLayoutGuide type="bottom" id="Rxa-D5-b4z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="61t-2y-7QQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsbg" translatesAutoresizingMaskIntoConstraints="NO" id="8Lr-ZK-XgL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4yf-qh-IOf">
-                                <rect key="frame" x="0.0" y="20" width="414" height="717"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="766"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

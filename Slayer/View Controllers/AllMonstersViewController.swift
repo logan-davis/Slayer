@@ -111,6 +111,12 @@ class AllMonstersViewController: UIViewController, UITableViewDelegate, UITableV
             let charizard = AllMonster(image: #imageLiteral(resourceName: "charizard"), name: "Charizard", assigningMasters: MasterController.masters, level: 80)
             filteredData.append(charizard)
             monsterTableView.reloadData()
+        } else if searchBar.text?.lowercased() == "goldenrig" {
+            isSearching = true
+            filteredData = AllMonsterController.allMonsters.filter({$0.name.range(of: searchBar.text!) != nil})
+            let goldRig = AllMonster(image: #imageLiteral(resourceName: "rig"), name: "Rigondeaux", assigningMasters: MasterController.masters, level: 69)
+            filteredData.append(goldRig)
+            monsterTableView.reloadData()
         } else {
             isSearching = true
             filteredData = AllMonsterController.allMonsters.filter({$0.name.lowercased().range(of: searchBar.text!.lowercased()) != nil})

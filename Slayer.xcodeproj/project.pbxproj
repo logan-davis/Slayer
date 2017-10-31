@@ -29,6 +29,8 @@
 		E699480A1FA18F9B00CA81C9 /* AllMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69948091FA18F9B00CA81C9 /* AllMonster.swift */; };
 		E699480C1FA18FCC00CA81C9 /* AllMonsterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E699480B1FA18FCC00CA81C9 /* AllMonsterController.swift */; };
 		E6AE46F81FA24F38000BE101 /* SuperiorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AE46F71FA24F38000BE101 /* SuperiorDetailViewController.swift */; };
+		E6D142CF1FA850F200232A5A /* MasterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D142CE1FA850F200232A5A /* MasterInfoViewController.swift */; };
+		E6D142D11FA85BD300232A5A /* MasterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D142D01FA85BD300232A5A /* MasterDetailViewController.swift */; };
 		E6E410B31FA15E5B009501EF /* UnlockablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E410B21FA15E5B009501EF /* UnlockablesViewController.swift */; };
 		E6E410B51FA15ED5009501EF /* UnlockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E410B41FA15ED5009501EF /* UnlockTableViewCell.swift */; };
 		E6E410B71FA17E90009501EF /* AllMonstersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E410B61FA17E90009501EF /* AllMonstersViewController.swift */; };
@@ -77,6 +79,8 @@
 		E69948091FA18F9B00CA81C9 /* AllMonster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonster.swift; sourceTree = "<group>"; };
 		E699480B1FA18FCC00CA81C9 /* AllMonsterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonsterController.swift; sourceTree = "<group>"; };
 		E6AE46F71FA24F38000BE101 /* SuperiorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperiorDetailViewController.swift; sourceTree = "<group>"; };
+		E6D142CE1FA850F200232A5A /* MasterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInfoViewController.swift; sourceTree = "<group>"; };
+		E6D142D01FA85BD300232A5A /* MasterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailViewController.swift; sourceTree = "<group>"; };
 		E6E410B21FA15E5B009501EF /* UnlockablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockablesViewController.swift; sourceTree = "<group>"; };
 		E6E410B41FA15ED5009501EF /* UnlockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockTableViewCell.swift; sourceTree = "<group>"; };
 		E6E410B61FA17E90009501EF /* AllMonstersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonstersViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				E67B1CC51F97C0A40080785A /* BlockViewController.swift */,
 				E67B1CC71F97C3760080785A /* DuradelViewController.swift */,
 				E675DD981F9FAFF900A70143 /* InformationViewController.swift */,
+				E6D142D01FA85BD300232A5A /* MasterDetailViewController.swift */,
+				E6D142CE1FA850F200232A5A /* MasterInfoViewController.swift */,
 				E63EE4091F72FA29001360C2 /* MenuViewController.swift */,
 				E65CF3961FA1989500206B4F /* MonsterDetailViewController.swift */,
 				E675DD961F9FAD5300A70143 /* QuestsViewController.swift */,
@@ -344,9 +350,11 @@
 				E63EE40A1F72FA29001360C2 /* MenuViewController.swift in Sources */,
 				E6863EDC1FA6EA67005C7F9C /* TabBarViewController.swift in Sources */,
 				E699480C1FA18FCC00CA81C9 /* AllMonsterController.swift in Sources */,
+				E6D142CF1FA850F200232A5A /* MasterInfoViewController.swift in Sources */,
 				E6EC91D61F54F9CB0019D1D7 /* ViewController.swift in Sources */,
 				E6EC91D41F54F9CB0019D1D7 /* AppDelegate.swift in Sources */,
 				E6EC91DC1F54F9CB0019D1D7 /* Slayer.xcdatamodeld in Sources */,
+				E6D142D11FA85BD300232A5A /* MasterDetailViewController.swift in Sources */,
 				E699480A1FA18F9B00CA81C9 /* AllMonster.swift in Sources */,
 				E60B89961F8ECEAD00282E5A /* StatsTableViewCell.swift in Sources */,
 				E6EFD4E81F995FFF000C948E /* BlockMonsterTableViewCell.swift in Sources */,
