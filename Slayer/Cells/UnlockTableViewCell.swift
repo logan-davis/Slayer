@@ -16,6 +16,7 @@ class UnlockTableViewCell: UITableViewCell {
     @IBOutlet weak var mithrilLabel: UILabel!
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var tzhaarLabel: UILabel!
+    @IBOutlet weak var diaryLabel: UILabel!
     
     let defaults = UserDefaults.standard
     let aviansieKey = "aviansieKey\(PlayerController.shared.playerName.lowercased())"
@@ -24,6 +25,7 @@ class UnlockTableViewCell: UITableViewCell {
     let mithrilKey = "mithrilKey\(PlayerController.shared.playerName.lowercased())"
     let redKey = "redKey\(PlayerController.shared.playerName.lowercased())"
     let tzhaarKey = "tzhaarKey\(PlayerController.shared.playerName.lowercased())"
+    let westernDiaryKey = "westernDiaryKey\(PlayerController.shared.playerName.lowercased())"
     
     @IBOutlet weak var aviansiesSwitch: UISwitch!
     @IBAction func aviansiesValueChanged(_ sender: UISwitch) {
@@ -56,6 +58,13 @@ class UnlockTableViewCell: UITableViewCell {
         updateViews()
     }
     
+    @IBOutlet weak var diarySwitch: UISwitch!
+    @IBAction func diaryValueChanged(_ sender: UISwitch) {
+        defaults.set(sender.isOn, forKey: westernDiaryKey)
+        updateViews()
+    }
+    
+    
     var player: Player? {
         didSet {
             self.updateViews()
@@ -86,6 +95,9 @@ class UnlockTableViewCell: UITableViewCell {
         if let setTzhaar = defaults.value(forKey: tzhaarKey) {
             tzhaarSwitch.isOn = setTzhaar as! Bool
         }
+        if let setDiary = defaults.value(forKey: westernDiaryKey) {
+            diarySwitch.isOn = setDiary as! Bool
+        }
 
     }
     
@@ -114,5 +126,9 @@ class UnlockTableViewCell: UITableViewCell {
         if tzhaarSwitch.isOn == true {
             tzhaarLabel.textColor = .green
         } else { tzhaarLabel.textColor = .yellow }
+        
+        if diarySwitch.isOn == true {
+            diaryLabel.textColor = .green
+        } else { diaryLabel.textColor = .yellow }
     }
 }

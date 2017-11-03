@@ -14,12 +14,14 @@ class AllMonster {
     let name: String
     let assigningMasters: [Master]
     let level: Int
+    let examine: String
     
-    init(image: UIImage, name: String, assigningMasters: [Master], level: Int) {
+    init(image: UIImage, name: String, assigningMasters: [Master], level: Int, examine: String) {
         
         self.image = image
         self.name = name
         self.assigningMasters = assigningMasters
         self.level = level
+        self.examine = examine
     }
 }

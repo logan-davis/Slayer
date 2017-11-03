@@ -12,6 +12,10 @@ class MonsterDetailViewController: UIViewController {
 
     @IBOutlet weak var monsterImage: UIImageView!
     @IBOutlet weak var monsterNameLabel: UILabel!
+    @IBOutlet weak var examineLabel: UILabel!
+    @IBOutlet weak var monsterRemember: UIImageView!
+    @IBOutlet weak var monsterLocation: UIImageView!
+    @IBOutlet weak var monsterStats: UIImageView!
     
     var currentMonster: AllMonster?
     
@@ -19,6 +23,10 @@ class MonsterDetailViewController: UIViewController {
         guard let currentMonster = currentMonster else { return }
         monsterImage.image = currentMonster.image
         monsterNameLabel.text = currentMonster.name
+        examineLabel.text = currentMonster.examine
+        monsterRemember.image = #imageLiteral(resourceName: "aberrantremember")
+        monsterLocation.image = #imageLiteral(resourceName: "aberrantlocations")
+        monsterStats.image = #imageLiteral(resourceName: "aberrsttats")
     }
     
     override func viewDidLoad() {

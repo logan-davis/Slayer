@@ -13,6 +13,10 @@ class MasterDetailViewController: UIViewController {
     @IBOutlet weak var masterImage: UIImageView!
     @IBOutlet weak var masterNameLabel: UILabel!
     @IBOutlet weak var masterExamineLabel: UILabel!
+    @IBOutlet weak var masterReqs: UIImageView!
+    @IBOutlet weak var masterPoints: UIImageView!
+    @IBOutlet weak var masterLocation: UIImageView!
+    @IBOutlet weak var masterWeights: UIImageView!
     
     var clickedMaster: Master?
     
@@ -21,6 +25,10 @@ class MasterDetailViewController: UIViewController {
         masterImage.image = clickedMaster.chatHead
         masterNameLabel.text = clickedMaster.name
         masterExamineLabel.text = clickedMaster.examine
+        masterReqs.image = clickedMaster.reqs
+        masterPoints.image = clickedMaster.points
+        masterLocation.image = clickedMaster.location
+        masterWeights.image = clickedMaster.weights
     }
     
     override func viewDidLoad() {
