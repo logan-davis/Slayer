@@ -83,38 +83,38 @@ class AllMonstersViewController: UIViewController, UITableViewDelegate, UITableV
         } else if searchBar.text?.lowercased() == "untrimmed" {
             isSearching = true
             filteredData = AllMonsterController.allMonsters.filter({$0.name.lowercased().range(of: searchBar.text!) != nil})
-            let seventh = AllMonster(image: #imageLiteral(resourceName: "Slayer_cape_detail"), name: "Rip 7th", assigningMasters: MasterController.masters, level: 7, examine: "")
+            let seventh = AllMonster(image: #imageLiteral(resourceName: "Slayer_cape_detail"), name: "Rip 7th", assigningMasters: MasterController.masters, level: 7, examine: "", remember: #imageLiteral(resourceName: "clear"), locations: #imageLiteral(resourceName: "clear"), stats: #imageLiteral(resourceName: "clear"))
             filteredData.append(seventh)
             monsterTableView.reloadData()
         } else if searchBar.text?.lowercased() == "black" {
             isSearching = true
             filteredData = AllMonsterController.allMonsters.filter({$0.name.range(of: searchBar.text!) != nil})
-            let cmonBruh = AllMonster(image: #imageLiteral(resourceName: "cmonbruh"), name: "cmonBruh", assigningMasters: MasterController.masters, level: 10, examine: "")
+            let cmonBruh = AllMonster(image: #imageLiteral(resourceName: "cmonbruh"), name: "cmonBruh", assigningMasters: MasterController.masters, level: 10, examine: "", remember: #imageLiteral(resourceName: "clear"), locations: #imageLiteral(resourceName: "clear"), stats: #imageLiteral(resourceName: "clear"))
             filteredData.append(cmonBruh)
             monsterTableView.reloadData()
         } else if searchBar.text?.lowercased() == "\(username)" {
             isSearching = true
             filteredData = AllMonsterController.allMonsters.filter({$0.name.range(of: searchBar.text!) != nil})
-            let noob = AllMonster(image: #imageLiteral(resourceName: "noob"), name: "\(PlayerController.shared.playerName)", assigningMasters: MasterController.masters, level: 69, examine: "")
+            let noob = AllMonster(image: #imageLiteral(resourceName: "noob"), name: "\(PlayerController.shared.playerName)", assigningMasters: MasterController.masters, level: 69, examine: "", remember: #imageLiteral(resourceName: "clear"), locations: #imageLiteral(resourceName: "clear"), stats: #imageLiteral(resourceName: "clear"))
             filteredData.append(noob)
             monsterTableView.reloadData()
         } else if searchBar.text?.lowercased() == "gnome child" {
             isSearching = true
             filteredData = AllMonsterController.allMonsters.filter({$0.name.range(of: searchBar.text!) != nil})
             let gnomeGif = UIImage .animatedImageNamed("gnome-gif", duration: 1.0)
-            let noob = AllMonster(image: gnomeGif!, name: "Gnome Child", assigningMasters: MasterController.masters, level: 69, examine: "")
+            let noob = AllMonster(image: gnomeGif!, name: "Gnome Child", assigningMasters: MasterController.masters, level: 69, examine: "", remember: #imageLiteral(resourceName: "clear"), locations: #imageLiteral(resourceName: "clear"), stats: #imageLiteral(resourceName: "clear"))
             filteredData.append(noob)
             monsterTableView.reloadData()
         } else if searchBar.text?.lowercased() == "charizard" {
             isSearching = true
             filteredData = AllMonsterController.allMonsters.filter({$0.name.range(of: searchBar.text!) != nil})
-            let charizard = AllMonster(image: #imageLiteral(resourceName: "charizard"), name: "Charizard", assigningMasters: MasterController.masters, level: 80, examine: "")
+            let charizard = AllMonster(image: #imageLiteral(resourceName: "charizard"), name: "Charizard", assigningMasters: MasterController.masters, level: 80, examine: "", remember: #imageLiteral(resourceName: "clear"), locations: #imageLiteral(resourceName: "clear"), stats: #imageLiteral(resourceName: "clear"))
             filteredData.append(charizard)
             monsterTableView.reloadData()
         } else if searchBar.text?.lowercased() == "goldenrig" {
             isSearching = true
             filteredData = AllMonsterController.allMonsters.filter({$0.name.range(of: searchBar.text!) != nil})
-            let goldRig = AllMonster(image: #imageLiteral(resourceName: "rig"), name: "Rigondeaux", assigningMasters: MasterController.masters, level: 69, examine: "")
+            let goldRig = AllMonster(image: #imageLiteral(resourceName: "rig"), name: "Rigondeaux", assigningMasters: MasterController.masters, level: 69, examine: "", remember: #imageLiteral(resourceName: "clear"), locations: #imageLiteral(resourceName: "clear"), stats: #imageLiteral(resourceName: "clear"))
             filteredData.append(goldRig)
             monsterTableView.reloadData()
         } else {

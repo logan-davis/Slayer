@@ -24,9 +24,9 @@ class MonsterDetailViewController: UIViewController {
         monsterImage.image = currentMonster.image
         monsterNameLabel.text = currentMonster.name
         examineLabel.text = currentMonster.examine
-        monsterRemember.image = #imageLiteral(resourceName: "aberrantremember")
-        monsterLocation.image = #imageLiteral(resourceName: "aberrantlocations")
-        monsterStats.image = #imageLiteral(resourceName: "aberrsttats")
+        monsterRemember.image = currentMonster.remember
+        monsterLocation.image = currentMonster.locations
+        monsterStats.image = currentMonster.stats
     }
     
     override func viewDidLoad() {
